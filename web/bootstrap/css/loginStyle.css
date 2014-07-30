@@ -1,0 +1,266 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {
+	
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+        
+}
+.login { 
+    
+ background-image: url(../../Img/fondologin.jpg);
+}
+h1 {
+    font-size: 24px; 
+}
+.loginbox {
+   
+      
+    width: 500px;
+    margin: 8% auto 0 auto; 
+    position: relative; 
+}
+.loginboxinner { 
+	  
+        padding: 20px;
+        position: relative; 
+          
+	
+}
+.loginheader { 
+   
+    height: 40px;
+    margin-top:10%;
+    margin-left:60%;
+    
+}
+.loginform {
+    
+   margin-top:-20%;
+}
+
+.loginbox h1 { 
+    font-size: 30px; 
+    background: blue;
+    color: #555; 
+    font-weight: normal; 
+    padding-top: 10px; 
+}
+.loginbox .logo { 
+   
+}
+.logo img { 
+   
+}
+
+
+.password{ 
+
+      border-color: #999;
+      width:45%;
+    margin-top:10%;
+    -o-border-radius:8px;
+    -ms-border-radius:8px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius: 8px;
+    font-size: 21px;
+    padding-left: 30px;
+    background:url(../../Img/contra.png) no-repeat  ;
+    
+}
+
+.usuario {
+       border-color: #999;
+       width:45%;
+       height: 30%;
+    margin-top:10%;
+    -o-border-radius:8px;
+    -ms-border-radius:8px;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius: 8px;
+    
+    font-size: 21px;
+    padding-left: 30px;
+    background:url(../../Img/user.png) no-repeat  ;
+}
+.loginbox button { 
+    background:#6699ff;
+         color:white;
+       
+        font-size:21px; border: 0; 
+        letter-spacing: 1px; 
+        margin-left:5%;
+        width:180px;
+	-moz-box-shadow: 1px 1px 3px #fff; 
+        -webkit-box-shadow: 1px 1px 3px #fff; 
+        box-shadow: 1px 1px 3px #fff; 
+        cursor: pointer;
+}
+
+.loginbox p{
+    margin-top: 4%;
+}
+
+
+
+.radius { 
+ background-image: url(../../Img/fondologin.jpg);
+    -moz-border-radius: 20px; 
+    -webkit-border-radius: 20px;
+    border-radius: 20px; 
+    
+    opacity: 0.8;
+   
+}
+
+
+
+.hero-uniti {
+  width:95%; 
+ opacity: 0.6;
+ margin-left:2%;
+ margin-top: 1%;
+ background-image: url(../../Img/fondologin.jpg);
+
+  -o-box-shadow:5px 5px 2px #999;
+    -ms-box-shadow:5px 5px 2px #999;
+    -moz-box-shadow:5px 5px 2px #999;
+    -webkit-box-shadow:5px 5px 2px #999;
+     -moz-border-radius: 20px; 
+    -webkit-border-radius: 20px;
+    border-radius: 20px; 
+}
+img[name="logoempresa"]{
+    width:23%;
+    
+}
+
+img[name="datic"]{
+    width: 30%;
+    margin-top: -3%;
+    position: absolute;
+    
+}
+
+
+.alinear{
+    margin-left:8%;
+    margin-top: 1%;
+}
+
+img[name="Utez"]{
+    width:15%;
+}
+
+
+.alinearlOgoUtez{
+    margin-left:45%;
+  position: absolute;
+   margin-top:0.5%;
+}
+img[name="nombresistema"]{
+    width:55%;
+}
+.alinearnombresistema{
+     margin-left:40%;
+     position: absolute;
+     font-family:miFuente;
+     margin-top: -7%;
+     font-size:32px;
+     color:white;
+     
+}
+
+.alinearnombresistema1{
+     margin-left:33%;
+     position: absolute;
+     font-family:miFuente2;
+     margin-top:-3%;
+     font-size:32px;
+     color:#00CC33;
+     
+   
+}
+
+@font-face{
+	font-family:miFuente;
+	src:url(../Fonts/AIRBORNE.ttf);
+	font-size:30px;
+}
+
+@font-face{
+    font-family: miFuente2;
+    src:url(../Fonts/AUdimat-BoldItalic.otf);
+}
+
+
+@media screen and (max-width: 430px) {
+	
+	body { 
+            font-size: 11px;
+        }
+        
+	button, select, textarea { 
+            font-size: 11px; 
+        }
+        .usuario{
+             font-size: 21px;
+        }
+        .password{
+            font-size: 21px;
+        }
+	
+	.loginbox { 
+            width:auto; 
+            margin: 10px;
+        }
+	.loginbox usuario {
+            width: 95%;
+        }
+        
+        .loginbox password {
+            width: 95%;
+        }
+	.loginbox button {
+            width:50%; 
+        }
+    .alinearnombresistema{
+     margin-left:35%;
+     position: absolute;
+     font-family:miFuente;
+     margin-top: -6%;
+     font-size:10px;
+     color:white;
+     
+}
+
+.alinearnombresistema1{
+     margin-left:25%;
+     position: absolute;
+     font-family:miFuente2;
+     margin-top:-3%;
+     font-size:8px;
+     color:#00CC33;
+     
+   
+}
+
+@font-face{
+	font-family:miFuente;
+	src:url(../Fonts/AIRBORNE.ttf);
+	font-size:30px;
+}
+
+@font-face{
+    font-family: miFuente2;
+    src:url(../Fonts/AUdimat-BoldItalic.otf);
+}
+
+        
+}	
