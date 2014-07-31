@@ -17,9 +17,18 @@ import java.util.List;
 public class AccionesProfesor {
 
     List listaProfesor = new ArrayList();
+    private int idMateria;
 
     public List getListaProfesor() {
         return listaProfesor;
+    }
+
+    public int getIdMateria() {
+        return idMateria;
+    }
+
+    public void setIdMateria(int idMateria) {
+        this.idMateria = idMateria;
     }
 
     public void setListaProfesor(List listaProfesor) {
@@ -27,6 +36,7 @@ public class AccionesProfesor {
     }
 
     public String consultarProfesor() {
+        System.out.println("Vale: " + idMateria);
         DaoProfesor dao = new DaoProfesor();
         listaProfesor = dao.consultaProfesor();
         return SUCCESS;

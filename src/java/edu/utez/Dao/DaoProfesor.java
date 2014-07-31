@@ -19,12 +19,11 @@ import java.util.List;
  */
 public class DaoProfesor {
 
-
     private String sqlConsultaProfesor = "SELECT idProfesor , CONCAT(Nombre, ' ', ApellidoPaterno, ' ', ApellidoMaterno) AS NombreCompleto FROM profesor;";
+    private String sqlTraerId = "SELECT idProfesor  FROM profesor WHERE CONCAT(Nombre,ApellidoPaterno,ApellidoMaterno) = ?;";
 
     public List consultaProfesor() {
         List listaProfesor = new ArrayList();
-
         try {
             Connection con = ConexionMySql.getConnection();
             PreparedStatement ps = con.prepareStatement(sqlConsultaProfesor);
@@ -41,6 +40,18 @@ public class DaoProfesor {
             e.printStackTrace();
         }
         return listaProfesor;
+    }
+
+    public int traeridMaestro(BeanProfesor bean) {
+        int idProfesor = 0;
+        try {
+            Connection con = ConexionMySql.getConnection();
+            PreparedStatement ps = con.prepareStatement(sqlTraerId);
+
+        } catch (Exception e) {
+
+        }
+        return idProfesor;
     }
 
 }

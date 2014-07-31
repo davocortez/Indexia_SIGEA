@@ -11,14 +11,14 @@ package edu.utez.Bean;
  */
 public class BeanMateria {
 
-    private int idEspecialidad;
+    private String idEspecialidad;
     private String descripcion;
 
-    public int getIdEspecialidad() {
+    public String getIdEspecialidad() {
         return idEspecialidad;
     }
 
-    public void setIdEspecialidad(int idEspecialidad) {
+    public void setIdEspecialidad(String idEspecialidad) {
         this.idEspecialidad = idEspecialidad;
     }
 

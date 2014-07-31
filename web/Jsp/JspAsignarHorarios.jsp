@@ -16,9 +16,7 @@
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
-
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
@@ -60,6 +58,7 @@
             </div> 
             <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+            <script type="text/javascript"src="<%=context%>/Js/Validaciones.js"></script>
             <script type="text/javascript">
                 $('ul.slimmenu').slimmenu(
                         {
@@ -80,11 +79,26 @@
             </div>
             <div class="row">
                 <div class="hero-unit">
-                    <s:select list="listaProfesor" label="Lista Profesores: " listKey="idProfesor" listValue="nomCompleto" name="listaPro"/>  
+                    <s:form action="consultaProfe" id="formulario">
+                        <s:select list="listaMaterias" label="Lista Materia" 
+                                  listKey="idEspecialidad" listValue="descripcion" name="listaMate" 
+                                  onchange="valCombo();" id="listaMate"/> 
+                    </s:form>                
+
+                    <s:if  test="listaProfesor==null">
+                        <s:select list="listaProfesor" label="Lista Materia" 
+                                  listKey="idProfesor" listValue="nomCompleto" name="listaProfe" 
+                                  id="listaProfe"/>                       
+                    </s:if>
+                    <s:else>
+                        <s:select list="listaProfesor" label="Lista Materia" 
+                                  listKey="idProfesor" listValue="nomCompleto" name="listaProfe" 
+                                  id="listaProfe"/> 
+                    </s:else>
+
                 </div>
             </div>
         </div>
-
     </body>
 </html>
 

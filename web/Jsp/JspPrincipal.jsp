@@ -55,7 +55,7 @@
                                 </ul> 
                             </li> 
                             <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
-                            <li><s:a  href="consultaProfesor.action">Entrega de Portafolios </s:a></li> 
+                            <li><s:a  href="consultaMate.action">llena Combo</s:a></li> 
                             <li><a  href="<%=context%>/Jsp/JspLogin.jsp">Cerrar Sesión</a></li>
                         </ul>
                     </div>

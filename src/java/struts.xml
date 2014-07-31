@@ -7,8 +7,13 @@
     <constant name="struts devMode" value="true"/>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
-        <action name="consultaProfesor" class="edu.utez.Acciones.AccionesProfesor" method="consultarProfesor">
+        <action name="consultaMate" class="edu.utez.Acciones.AccionesMaterias" method="consultaMaterias">
             <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
         </action>
+        
+        <action name="consultaProfe" class="edu.utez.Acciones.AccionesProfesor" method="consultarProfesor">
+            <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
+        </action>
+        
     </package>    
 </struts>
