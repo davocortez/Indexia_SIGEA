@@ -6,7 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,29 +72,64 @@
             </script>
 
             <div class="row">
-                <div class="span121 ">                            
+                <div class="span121 "> 
+
+                    <select name="materias" class="pull-right" style="margin-right: 5px">
+                        <option value="">Selecciona una materia</option>
+                        <s:iterator value="listaMaterias" status="it">
+                            <option value="<s:property value="idEspecialidad"/>"><s:property value="descripcion"/></option>
+                        </s:iterator>
+                    </select>
+
+                    <select name="materias" onchange="valCombo();" class="pull-right" id="combo" style="margin-right: 5px">
+                        <option value="">Selecciona una Profesor</option>
+                        <s:iterator value="listaProfesor" status="it">
+                            <option value="<s:property value="idProfesor"/>"><s:property value="nomCompleto"/></option>
+                        </s:iterator>
+                    </select>
+
+                    <button class="btn btn-success" onclick="asignarMateriaGrupo('<s:property value="idProfesor"/>', '<s:property value="idEspecialidad"/>')">
+                        <i class="icon-arrow-right"></i> 
+                    </button>
+
+                    <label>Horas: </label>
+                    <input type="text" name="horas" required="required" maxlength="45"/>
+
+                    <select required="required" name="txtNuevoGrupo">
+                        <option value="">Selecciona una letra para el grupo</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                    </select>
 
                 </div>
-
             </div>
             <div class="row">
-                <div class="hero-unit">
-                    <s:form action="consultaProfe" id="formulario">
-                        <s:select list="listaMaterias" label="Lista Materia" 
-                                  listKey="idEspecialidad" listValue="descripcion" name="listaMate" 
-                                  onchange="valCombo();" id="listaMate"/> 
-                    </s:form>                
 
-                    <s:if  test="listaProfesor==null">
-                        <s:select list="listaProfesor" label="Lista Materia" 
-                                  listKey="idProfesor" listValue="nomCompleto" name="listaProfe" 
-                                  id="listaProfe"/>                       
-                    </s:if>
-                    <s:else>
-                        <s:select list="listaProfesor" label="Lista Materia" 
-                                  listKey="idProfesor" listValue="nomCompleto" name="listaProfe" 
-                                  id="listaProfe"/> 
-                    </s:else>
+                <div class="hero-unit">                   
 
                 </div>
             </div>

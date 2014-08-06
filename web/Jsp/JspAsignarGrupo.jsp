@@ -63,6 +63,7 @@
             </div> 
             <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+              <script type="text/javascript"src="<%=context%>/Js/Validaciones.js"></script>
             <script type="text/javascript">
                 $('ul.slimmenu').slimmenu(
                         {
@@ -91,9 +92,13 @@
             </div>
             <div class="row">
                 <div class="hero-unit">
-
+                    <form id="horas">
+                        <label>Horas: </label>
+                        <input type="text" name="hor" id="hor" maxlength="45"/>
+                        <input type="submit" value="Enviar" >
+                    <form>
                 </div>
-            </div>
+            </div> 
         </div>
 
     </body>

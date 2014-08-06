@@ -5,7 +5,7 @@
 --%>
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%@taglib uri="/struts-tags" prefix="s"%>
 
 <!DOCTYPE html>
 <html>
@@ -55,7 +55,7 @@
                                 </ul> 
                             </li> 
                             <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
-                            <li><s:a  href="consultaMate.action">llena Combo</s:a></li> 
+                            <li><s:a  href="consultaMate.action">llena Combo</s:a></li>                          
                             <li><a  href="<%=context%>/Jsp/JspLogin.jsp">Cerrar Sesión</a></li>
                         </ul>
                     </div>
@@ -90,7 +90,6 @@
                 </div>
                 <div class="row">
                     <div class="hero-unit">
-
                     </div>
                 </div>
             </div>

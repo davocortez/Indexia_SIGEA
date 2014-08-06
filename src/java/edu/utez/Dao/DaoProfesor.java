@@ -53,5 +53,4 @@ public class DaoProfesor {
         }
         return idProfesor;
     }
-
 }
