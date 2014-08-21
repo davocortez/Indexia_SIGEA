@@ -15,5 +15,9 @@
             <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
         </action>
         
+        <action name="consultarGrupos" class="sigea.mx.Acciones.AccionesGrupo" method="consultarGrupos">
+            <result name="success">/Jsp/JspAltaGrupos.jsp</result>
+        </action>
+        
     </package>    
 </struts>
