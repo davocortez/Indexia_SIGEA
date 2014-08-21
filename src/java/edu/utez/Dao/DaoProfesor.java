@@ -31,7 +31,7 @@ public class DaoProfesor {
             while (rs.next()) {
                 BeanProfesor bean = new BeanProfesor();
                 bean.setIdProfesor(rs.getInt(1));
-                bean.setNomCompleto(rs.getString(2));
+                bean.setNombreProfesor(rs.getString(2));
                 listaProfesor.add(bean);
             }
             ps.close();

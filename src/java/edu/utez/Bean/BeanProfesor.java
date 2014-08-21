@@ -11,11 +11,16 @@ package edu.utez.Bean;
  */
 public class BeanProfesor {
 
+    private String nombreProfesor;
     private int idProfesor;
-    private String nombre;
-    private String apeMaterno;
-    private String apePaterno;
-    private String nomCompleto;
+
+    public String getNombreProfesor() {
+        return nombreProfesor;
+    }
+
+    public void setNombreProfesor(String nombreProfesor) {
+        this.nombreProfesor = nombreProfesor;
+    }
 
     public int getIdProfesor() {
         return idProfesor;
@@ -24,39 +29,5 @@ public class BeanProfesor {
     public void setIdProfesor(int idProfesor) {
         this.idProfesor = idProfesor;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApeMaterno() {
-        return apeMaterno;
-    }
-
-    public void setApeMaterno(String apeMaterno) {
-        this.apeMaterno = apeMaterno;
-    }
-
-    public String getApePaterno() {
-        return apePaterno;
-    }
-
-    public void setApePaterno(String apePaterno) {
-        this.apePaterno = apePaterno;
-    }
-
-    public String getNomCompleto() {
-        return nomCompleto;
-    }
-
-    public void setNomCompleto(String nomCompleto) {
-        this.nomCompleto = nomCompleto;
-    }
-
-  
 
 }
