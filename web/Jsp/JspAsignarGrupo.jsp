@@ -43,9 +43,9 @@
             <div class="row">
                 <div class="span12 ">
                     <ul  class = "slimmenu" >
-                        <li><a  href= "#" > Horarios </a>
+                        <li><a href="<%=context%>/Jsp/JspAltaGrupos.jsp"> Grupos </a>                                                        
                             <ul> 
-                                <li><a  href="<%=context%>/Jsp/JspAsignarHorarios.jsp" > Asignar Horarios </a></li> 
+                                <li><a  href="<%=context%>/Jsp/JspAltaGrupos.jsp" > Alta Grupos </a></li> 
                             </ul> 
                         </li>        
                         <li> 
@@ -56,8 +56,16 @@
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
                         </li> 
-                        <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
+                        <li>
+                            <a href="">Profesores</a>
+                            <ul>
+                                <li><a  href="<%=context%>/Jsp/JspAltaProfesores.jsp">Registrar Profesor</a></li> 
+                                <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
+                            </ul>
+                        </li>
+                       
                         <li><a  href="<%=context%>/Jsp/JspLogin.jsp">Cerrar Sesión</a></li>
+                        
                     </ul>
                 </div>
             </div> 
