@@ -18,9 +18,19 @@
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
-
+        <script type="text/javascript" language="javascript" src="<%=context%>/media/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="<%=context%>/media/js/jquery.dataTables.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" href="<%=context%>/media/css/demo_table.css" />  
+        <script type="text/javascript" charset="utf&minus;8">
+            $(document).ready(function() {
+                $('#example').dataTable({
+                     "oLanguage": {
+                        "sUrl": "<%=context%>/media/js/datatable.spanish.txt"
+                        }
+                        });
+                        });
+          </script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
 
@@ -53,6 +63,7 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
+                                <li><a  href= "<%=context%>/Jsp/JspAsignarTutores.jsp"> Asignar Tutor </a></li> 
                                 <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
@@ -88,24 +99,26 @@
             <div class="row">
                 <div class="span121">
                     <legend >Entrega de Portafolios</legend>
-                    <table id="entregaPortafolio">
-
-                        <td id="profeNombre">
+                     <table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+                    <thead>
+                        <tr>
+                        <th name="nombre">
                             Nombre Profesor:
-                        </td>
-                        <td id="portafolio">
+                        </th>
+                        <th name="nombre">
                             Portafolio
-                        </td>
+                        </th>
+                        </tr>
+                        <tbody>
                         <s:iterator value="listaPersonas">
 
                             <tr>
                                 <td id="datos"> <s:property value="nombreProfesor"/></td>
                                 <td id="datos"></td>
                             </tr>
-                            <tr>                                
-                             
-                            </tr>
+                            
                         </s:iterator>
+                        </tbody>    
                     </table>
                 </div>
 

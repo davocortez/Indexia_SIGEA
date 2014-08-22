@@ -2693,6 +2693,17 @@ legend + .control-group {
     color:#fff;
     font-size:16px;
 }
+#asignarTutores{
+    margin-left:30%;
+}
+#tutores{
+    margin-left:25%; 
+    width:40%;
+    border-radius: 10px;
+    -o-borde-radius:10px;
+    -ms-border-radius:10px;
+    -moz-border-radius:10px;
+}
 
 #datosEspecialidad{
     padding-top:60px; 

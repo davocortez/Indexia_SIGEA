@@ -1,6 +1,6 @@
 <%-- 
-    Document   : JspAltaProfesores
-    Created on : 21-ago-2014, 4:03:13
+    Document   : AsdignarTutores
+    Created on : 22-ago-2014, 16:06:31
     Author     : Erick Herrera
 --%>
 
@@ -11,9 +11,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <title>JSPEntregaPortafolio</title>
+       <title>JspAsignarTutores</title>
        <meta name="viewport" content="width=device-width intial-scale=1.0 "
-             
               <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
               <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
                <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
@@ -38,8 +37,7 @@
                      </div>
                      <div class="alinearnombresistema1">
                             Sistema de Gestion Academica
-                     </div>              
-                </div>
+                     </div>    </div>
             </div>
             <div class="row">
                 <div class="span12 ">
@@ -71,8 +69,7 @@
                         
                     </ul>
                 </div>
- 
-            </div> 
+           </div> 
             <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
             <script type="text/javascript">
@@ -88,33 +85,24 @@
             </script>
                 
                 <div class="row">
-                       <div class="span121">
-                         
+                       <div class="span121 ">
+                           <legend>Asignar Tutores</legend>
+                           <fieldset id="tutores">
+                           <table id="asignarTutores">
+                               <tr>
+                                   <td>Profesor</td><td></td>
+                                   <td>Grupo</td><td></td>
+                               </tr>
                                
-                           <fieldset id="fieldsetProfesor">
-                           <legend>Registrar Profesor</legend>
-                           <form>
-                                    <table id="registrarProfesor">
-                                        <tr>
-                                            <td>Nombre Profesor</td><td><input type="text" id="nombreProfesor"/></td>  
-                                       
-                                       </tr> 
-                                       <tr>
-                                           <td>Apellido Paterno</td><td><input type="text" id="apellidoPaterno" /></td>
-                                       </tr>
-                                       <tr>
-                                           <td>Apellido Materno</td><td> <input type="text" id="apellidoMaterno"/></td>
-                                       </tr>
-                                       <tr>
-                                           <td>Tipo Profesor</td><td><input type="text" id="tipoProfesor"/></td>
-                                       </tr>
-                                    </table>
-                                       <button class="botonRegistrarAlumno">Registrar</button>
-                             </form>
-                        </fieldset>
-                      </div>
-                      
-          </div>
+                               <tr>
+                                   <td></td>
+                                   <td><button>Guardar</button></td>
+                               </tr>
+                           </table>
+                           </fieldset>   
+                           
+                       </div>
+                    </div>
          <div class="row">
               <div class="hero-unit">
                        
@@ -124,5 +112,3 @@
         
     </body>
 </html>
-
-
