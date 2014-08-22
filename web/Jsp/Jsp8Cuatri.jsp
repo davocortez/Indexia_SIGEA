@@ -8,7 +8,7 @@
     int contador = 1;
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -93,13 +93,13 @@
 
             <div class="row">
                 <div class="span121 ">
-                     <label id="label1erCuatri">8to Cuatrimestre</label>
+                     <label id="label1erCuatri">8vo Cuatrimestre</label>
                     <table id="datos1Cuatri">
                         <tr>
                         <td id="no">No</td>
                         <td id="materia">Materias</td>
                         <td id="profesor">Profesor</td>
-                        <td class="hora">Horas</td>    
+                        <td id="hora">Horas</td>    
                         </tr>
                         <tr>
                         <td id="datos"> </td>
@@ -112,6 +112,12 @@
                         <td id="datos"> </td>
                         <td id="datos"> </td>
                         <td id="datos"> </td>    
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td> </td>
+                          <td id="totalHoras">Total Horas</td>
+                          <td id="datos"> </td>  
                         </tr>
                         
                     </table>

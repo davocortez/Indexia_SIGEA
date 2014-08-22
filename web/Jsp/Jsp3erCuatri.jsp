@@ -7,11 +7,11 @@
     int contador = 1;
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JSP2doCuatri</title>
+        <title>JSP3erCuatri</title>
         <meta name="viewport" content="width=device-width intial-scale=1.0 "
               <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -98,7 +98,7 @@
                         <td id="no">No</td>
                         <td id="materia">Materias</td>
                         <td id="profesor">Profesor</td>
-                        <td class="hora">Horas</td>    
+                        <td id="hora">Horas</td>    
                         </tr>
                         <tr>
                         <td id="datos"> </td>
@@ -111,6 +111,12 @@
                         <td id="datos"> </td>
                         <td id="datos"> </td>
                         <td id="datos"> </td>    
+                        </tr>
+                        <tr>
+                          <td> </td>
+                          <td> </td>
+                          <td id="totalHoras">Total Horas</td>
+                          <td id="datos"> </td>  
                         </tr>
                         
                     </table>

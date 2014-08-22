@@ -89,10 +89,10 @@
                            <legend>Registrar Profesor</legend>
                            <form>
                                     <table id="registrarProfesor">
-                                        <s:textfield id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor" />
-                                        <s:textfield id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno"/>
-                                        <s:textfield id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno"/>
-                                        <s:textfield id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor"/>
+                                        <input type="text" id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor" />
+                                        <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno"/>
+                                        <input type="text" id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno"/>
+                                        <input type="text" id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor"/>
        
                                     </table>
                                        <button class="botonRegistrarAlumno">Registrar</button>

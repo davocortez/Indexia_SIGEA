@@ -6,7 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
 <html>
@@ -86,15 +86,23 @@
                 <div class="row">
                        <div class="span121">
                            <legend >Entrega de Portafolios</legend>
-                            <table>
-                              <th>
-                               <td>
+                            <table id="entregaPortafolio">
+                             
+                               <td id="profeNombre">
                                    Nombre Profesor:
                                </td>
-                                 <td>
+                               <td id="portafolio">
                                    Portafolio
                                </td>
-                             </th>
+                               <tr>
+                                   <td id="datos"></td>
+                                   <td id="datos"></td>
+                               </tr>
+                               <tr>
+                                   <td id="datos"></td>
+                                   <td id="datos"></td>
+                               </tr>
+                               
                          </table>
                       </div>
                       

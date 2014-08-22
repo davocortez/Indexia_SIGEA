@@ -6,7 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
 <html>
@@ -92,10 +92,19 @@
                            <legend>Registrar Profesor</legend>
                            <form>
                                     <table id="registrarProfesor">
-                                       <s:textfield id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor" />
-                                        <s:textfield id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno"/>
-                                        <s:textfield id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno"/>
-                                        <s:textfield id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor"/>
+                                        <tr>
+                                            <td>Nombre Profesor</td><td><input type="text" id="nombreProfesor"/></td>  
+                                       
+                                       </tr> 
+                                       <tr>
+                                           <td>Apellido Paterno</td><td><input type="text" id="apellidoPaterno" /></td>
+                                       </tr>
+                                       <tr>
+                                           <td>Apellido Materno</td><td> <input type="text" id="apellidoMaterno"/></td>
+                                       </tr>
+                                       <tr>
+                                           <td>Tipo Profesor</td><td><input type="text" id="tipoProfesor"/></td>
+                                       </tr>
                                     </table>
                                        <button class="botonRegistrarAlumno">Registrar</button>
                              </form>
