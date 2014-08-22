@@ -6,7 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <%@taglib  prefix="s" uri="/struts-tags" %>
+ <%--<%@taglib  prefix="s" uri="/struts-tags" %>--%>
 <%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
@@ -116,6 +116,38 @@
                                            <td></td>
                                            <td><button>Guardar</button></td>
                                        </tr>
+                                   </table>
+                                   <table id="guardarTutores">
+                                       <tr>
+                                           <td id="nombreTutor">Nombre</td>
+                                           <td id="cuatrimestre">Cuatrimestre</td>
+                                           <td id="grupo">Grupo</td>
+                                       </tr>
+                                       <tr>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       </tr>
+                                       <tr>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       </tr>
+                                       <tr>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       <td id="datosTutores">
+                                       </td>
+                                       </tr>
+                                           
                                    </table>
                                </form>
                            </fieldset>   

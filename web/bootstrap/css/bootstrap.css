@@ -2693,6 +2693,36 @@ legend + .control-group {
     color:#fff;
     font-size:16px;
 }
+#guardarTutores{
+     margin-left:2%;
+    margin-top:5%;
+    
+}
+#datosTutores{
+    padding-top: 20px;
+    background:#ADD8E6;
+}
+#nombreTutor{
+    width:42%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#cuatrimestre{
+    width:20%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#grupo{
+    width:42%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
 #asignarTutores{
     margin-left:30%;
 }

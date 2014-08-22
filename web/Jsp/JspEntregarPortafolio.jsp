@@ -18,10 +18,10 @@
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" language="javascript" src="<%=context%>/media/js/jquery.js"></script>
-        <script type="text/javascript" language="javascript" src="<%=context%>/media/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="javascript" src="<%=context%>/bootstrap/media/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="<%=context%>/bootstrap/media/js/jquery.dataTables.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="<%=context%>/media/css/demo_table.css" />  
+        <link rel="stylesheet" href="<%=context%>/bootstrap/media/css/demo_table.css" />  
         <script type="text/javascript" charset="utf&minus;8">
             $(document).ready(function() {
                 $('#example').dataTable({
