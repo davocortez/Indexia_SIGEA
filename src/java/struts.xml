@@ -24,5 +24,24 @@
             <result name="success">/Jsp/JspEntregarPortafolio.jsp</result>
         </action>
         <!-- Consultar Profesores en Portafolios -->
-    </package>    
+        
+        
+                <!-- Consultar Asesores -->
+        <action name="consultaTutores" class="edu.utez.Acciones.AccionesProfesor" method="consultaAsesores">
+            <result name="success">/Jsp/JspAsignarTutores.jsp</result>
+               <result name="input">/Jsp/JspAsignarTutores.jsp</result>
+        </action>
+        <!--  -->
+        
+        
+                        <!-- Registro Asesores -->
+        <action name="RegistrarAsesores" class="edu.utez.Acciones.AccionesProfesor" method="registroAsesores">
+            <result name="success">/Jsp/JspAsignarTutores.jsp</result>
+               <result name="input">/Jsp/JspAsignarTutores.jsp</result>
+        </action>
+        <!--- -->
+    </package>  
+    
+      
+          
 </struts>

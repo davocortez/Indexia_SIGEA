@@ -6,6 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+ <%@taglib  prefix="s" uri="/struts-tags" %>
 <%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
@@ -51,8 +52,12 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspAsignarTutores.jsp"> Asignar Tutor </a></li> 
+                                
+                                <li><s:a action="consultaTutores">Asignar Tutor</s:a>
+                                    </li> 
+                                
                                 <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
+                                
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
                         </li> 
@@ -88,17 +93,31 @@
                        <div class="span121 ">
                            <legend>Asignar Tutores</legend>
                            <fieldset id="tutores">
-                           <table id="asignarTutores">
-                               <tr>
-                                   <td>Profesor</td><td></td>
-                                   <td>Grupo</td><td></td>
-                               </tr>
-                               
-                               <tr>
-                                   <td></td>
-                                   <td><button>Guardar</button></td>
-                               </tr>
-                           </table>
+                                 
+                               <form action="RegistrarAsesores">
+                                   <table id="asignarTutores">
+                                       <tr>
+                                           <td>Profesor</td>
+                                           <td>
+
+                                               <s:select list="ListaNombreProfesores" name="idProfesor" listKey="idProfesor" listValue="nombreProfesor" headerKey="0" headerValue="Seleccione un profesor:">
+
+                                               </s:select> 
+                                           </td>
+                                           <td>Grupo</td>
+                                           <td>
+                                               <s:select list="ListadeGrados" name="idGrupo" listKey="idGrupo" listValue="%{Cuatrimestre + Grupo}" headerKey="0" headerValue="Selecciona  un  grupo:">
+
+                                               </s:select> 
+                                           </td>
+                                       </tr>
+
+                                       <tr>
+                                           <td></td>
+                                           <td><button>Guardar</button></td>
+                                       </tr>
+                                   </table>
+                               </form>
                            </fieldset>   
                            
                        </div>

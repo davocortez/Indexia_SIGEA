@@ -6,6 +6,8 @@
 package edu.utez.Dao;
 
 import Utilerias.ConexionMySql;
+import edu.utez.Bean.BeanGrupo;
+import edu.utez.Bean.BeanMateria;
 import edu.utez.Bean.BeanProfesor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -52,5 +54,103 @@ public class DaoProfesor {
 
         }
         return idProfesor;
+    }
+    
+    /*************Metodos hector flores ************ */
+    
+    public List consultaProfesoresModuloProf() {
+        String consulta="select p.`idProfesor`,p.`Nombre`from profesor as p;";
+        List listaProf = new ArrayList();
+        try {
+            Connection con = ConexionMySql.getConnection();
+            PreparedStatement ps = con.prepareStatement(consulta);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                BeanProfesor bean = new BeanProfesor();
+                bean.setIdProfesor(rs.getInt(1));
+                bean.setNombreProfesor(rs.getString(2));
+                listaProf.add(bean);
+            }
+            ps.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listaProf;
+    }
+    
+    
+    
+      public List consultaGradoGrupoProfesores() {
+        String consulta="select g.`idGrupo`,g.`Cuatrimestre`,g.`Grupo`  from grupo as g;";
+        List listaGrados = new ArrayList();
+        try {
+            Connection con = ConexionMySql.getConnection();
+            PreparedStatement ps = con.prepareStatement(consulta);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                BeanGrupo grupo = new BeanGrupo();
+                grupo.setIdGrupo(rs.getInt(1));
+                grupo.setCuatrimestre(rs.getInt(2));
+                grupo.setGrupo(rs.getString(3));
+                listaGrados.add(grupo);
+            }
+            ps.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listaGrados;
+    }
+      
+      public boolean registroAsesores(BeanProfesor prof,BeanGrupo grup) {
+        boolean resultado = false;
+   
+        String registroProveedor = "insert into tutor(idProfesor,grupoID) VALUES(?,?);";
+        try {
+            Connection Connect = ConexionMySql.getConnection();
+            PreparedStatement ps = Connect.prepareStatement(registroProveedor);
+            ps.setInt(1, prof.getIdProfesor());
+            ps.setInt(2, grup.getIdGrupo());
+        
+       System.out.println("id profesor: "+prof.getIdProfesor());
+            System.out.println("id grupo: "+grup.getIdGrupo());
+            System.out.println("CONSULTA: " + ps);
+            
+            resultado = ps.executeUpdate() == 1;
+            ps.close();
+            Connect.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return resultado;
+    }
+    
+        public List DetallesProfesoresModuloProf() {
+        String consulta="select p.`Cuatrimestre`,p.`Grupo`,p2.`idProfesor`,p2.`Nombre`from grupo as p inner join asignacion_materia as a on p.`idGrupo`=a.`idGrupo` inner join profesor as p2 on a.`idProfesor`=p2.`idProfesor`;";
+        List listaTutores = new ArrayList();
+        try {
+            Connection con = ConexionMySql.getConnection();
+            PreparedStatement ps = con.prepareStatement(consulta);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                BeanMateria materia= new BeanMateria();
+                BeanGrupo grupo= new BeanGrupo();
+                BeanProfesor profesor= new BeanProfesor();
+                
+                grupo.setCuatrimestre(rs.getInt(1));
+                grupo.setGrupo(rs.getString(2));
+                profesor.setIdProfesor(rs.getInt(3));
+                profesor.setNombreProfesor(rs.getString(4));
+                listaTutores.add(grupo);
+                listaTutores.add(profesor);
+                
+            }
+            ps.close();
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listaTutores;
     }
 }
