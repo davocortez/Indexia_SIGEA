@@ -23,6 +23,7 @@ public class DaoPortafolio {
     String consultar="select * from Profesor";
         private String sqlConsultaProfesor = "SELECT idProfesor , CONCAT(Nombre, ' ', ApellidoPaterno, ' ', ApellidoMaterno) AS NombreCompleto FROM profesor;";
     private String sqlTraerId = "SELECT idProfesor  FROM profesor WHERE CONCAT(Nombre,ApellidoPaterno,ApellidoMaterno) = ?;";
+    
     public List consultaProfesor() {
         List listaProfesor = new ArrayList();
         try {
@@ -39,6 +40,7 @@ public class DaoPortafolio {
             con.close();
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("error al consultar");
         }
         return listaProfesor;
     }

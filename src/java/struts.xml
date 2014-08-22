@@ -15,9 +15,14 @@
             <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
         </action>
         
-        <action name="consultarGrupos" class="sigea.mx.Acciones.AccionesGrupo" method="consultarGrupos">
+        <action name="consultarGrupos" class="edu.utez.Acciones.AccionesGrupo" method="consultarGrupos">
             <result name="success">/Jsp/JspAltaGrupos.jsp</result>
         </action>
         
+        <!-- Consultar Profesores en Portafolios -->
+        <action name="consultarProfesoresPortafolio" class="edu.utez.Acciones.AccionesPortafolio" method="consultarProfesores">
+            <result name="success">/Jsp/JspEntregarPortafolio.jsp</result>
+        </action>
+        <!-- Consultar Profesores en Portafolios -->
     </package>    
 </struts>
