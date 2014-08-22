@@ -14,7 +14,7 @@
         <%@taglib prefix="s" uri="/struts-tags" %>
         <title>JSPEntregaPortafolio</title>
         <meta name="viewport" content="width=device-width intial-scale=1.0 "
-              <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspseguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
+                                <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
                         </li> 
@@ -61,15 +61,13 @@
                             <a href="">Profesores</a>
                             <ul>
                                 <li><a  href="<%=context%>/Jsp/JspAltaProfesores.jsp">Registrar Profesor</a></li> 
-                                    <s:url id="consultarProfesoresPortafolio" action="consultarProfesoresPortafolio">
-                                    </s:url>
-                                <li><s:a href="%{consultarProfesoresPortafolio}"> Entrega de Portafolios </s:a></li>
-                                   
+                                <li><a href="<%=context%>/Jsp/JspAsignarEspecialidad.jsp">Asignar Especialidad<li></a>
+                                <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
                             </ul>
                         </li>
-
+                       
                         <li><a  href="<%=context%>/Jsp/JspLogin.jsp">Cerrar Sesión</a></li>
-
+                        
                     </ul>
                 </div>
             </div> 

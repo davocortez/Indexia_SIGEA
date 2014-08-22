@@ -1755,7 +1755,7 @@ input[type="file"] {
 
 #profeNombre{
     width:50%;
-    text-align: center;
+    margin-left:20%; 
     background:#6495ED;
     color:#fff;
     font-size:16px;
@@ -2673,7 +2673,33 @@ legend + .control-group {
     -moz-border-radius: 10px;
     -ms-border-radius:10px; 
 }
+#especialidad{
+    margin-left:25%;
+    width: 40%;
+    border-radius: 10px;
+}
+#especialidadProfe{
+    margin-left:20%; 
+}
+#tablaEspecialidad{
+    margin-top:3%; 
+    margin-left:30%;
+}
+#especialidadTabla{
+    margin-left:26%;
+    margin-top:3%;
+    width:42%;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
 
+#datosEspecialidad{
+    padding-top:60px; 
+    width: 30%;
+    background: white;
+    background:#ADD8E6;
+}
 
 
 

@@ -1,22 +1,22 @@
 <%-- 
-    Document   : JspRegistrarUsuario
-    Created on : 21-ago-2014, 3:44:07
+    Document   : JspAsignarEspecialidad
+    Created on : 22-ago-2014, 12:39:46
     Author     : Erick Herrera
 --%>
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
 <html>
     <head>
-       <title>JSPEALtaProfesores</title>
-       <meta name="viewport" content="width=device-width intial-scale=1.0 ">
+       <title>JspAsignarEspecialidad</title>
+       <meta name="viewport" content="width=device-width intial-scale=1.0 "
               <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
               <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
                <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-               <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css"/>
+               <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
                
                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
@@ -37,8 +37,7 @@
                      </div>
                      <div class="alinearnombresistema1">
                             Sistema de Gestion Academica
-                     </div>              
-                </div>
+                     </div>    </div>
             </div>
             <div class="row">
                 <div class="span12 ">
@@ -69,7 +68,7 @@
                         
                     </ul>
                 </div>
-            </div> 
+           </div> 
             <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
             <script type="text/javascript">
@@ -85,23 +84,39 @@
             </script>
                 
                 <div class="row">
-                       <div class="span121">
-                           <fieldset id="fieldsetProfesor">
-                           <legend>Registrar Profesor</legend>
-                           <form>
-                                    <table id="registrarProfesor">
-                                        <input type="text" id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor" />
-                                        <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno"/>
-                                        <input type="text" id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno"/>
-                                        <input type="text" id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor"/>
-       
-                                    </table>
-                                       <button class="botonRegistrarAlumno">Registrar</button>
-                                </form>
-                            </fieldset>         
-                      </div>
-                      
-          </div>
+                       <div class="span121 ">
+                           <legend>Asignar Especialidad</legend>
+                           <fieldset id="especialidad">
+                           <table id="especialidadProfe">
+                               <tr>
+                                   <td>Profesor</td><td><input type="text" id="buscarProfesor"></td><td><button>Buscar</button></td>
+                               </tr>
+                           </table>
+                           </fieldset>   
+                           <table id="tablaEspecialidad">
+                               <tr>
+                                   <td><input type="hidden" placeholder="id Profesor"/></td>
+                               </tr>
+                               <tr>
+                                   <td>Nombre</td><td><input type="text" id="nombreCompleto"></td>
+                                   
+                               </tr>
+                               <tr>
+                                   <td>Especialidad</td><td><select><option value="html"></option></select></td>
+                               </tr>
+                               <tr>
+                                   <td></td><td><button>Agregar</button></td>
+                               </tr>
+                           </table>
+                           <table id="especialidadTabla">
+                                  
+                                <td id="profeNombre">Nombre Profesor:<input type="hidden"></td>
+                            <tr>   
+                                <td id="datosEspecialidad"></td>
+                            </tr>
+                           </table>
+                       </div>
+                    </div>
          <div class="row">
               <div class="hero-unit">
                        
@@ -111,5 +126,3 @@
         
     </body>
 </html>
-
-

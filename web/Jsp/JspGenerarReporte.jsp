@@ -53,7 +53,7 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspseguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
+                                <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
                         </li> 
@@ -61,6 +61,7 @@
                             <a href="">Profesores</a>
                             <ul>
                                 <li><a  href="<%=context%>/Jsp/JspAltaProfesores.jsp">Registrar Profesor</a></li> 
+                                <li><a href="<%=context%>/Jsp/JspAsignarEspecialidad.jsp">Asignar Especialidad<li></a>
                                 <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
                             </ul>
                         </li>
@@ -69,7 +70,7 @@
                         
                     </ul>
                 </div>
-           </div> 
+            </div> 
             <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
             <script type="text/javascript">
