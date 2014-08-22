@@ -2628,6 +2628,52 @@ legend + .control-group {
     background:#ADD8E6;
 }
 
+#seguimientoAlumnos{
+    margin-left:30%;
+}
+
+#nombreCompleto{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+    
+}
+
+#matricula{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+    
+}
+
+#apPaterno{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+   
+}
+#apMaterno{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+}
+#asignarProfesor{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px; 
+}
+#tutor{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px; 
+}
+
 
 
 

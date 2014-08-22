@@ -1,6 +1,6 @@
 <%-- 
-    Document   : JspSeguimientoAlumnos
-    Created on : 11-jun-2014, 23:50:29
+    Document   : JspseguimientodeAlumnos
+    Created on : 22-ago-2014, 12:35:51
     Author     : Erick Herrera
 --%>
 
@@ -84,15 +84,33 @@
                 
                 <div class="row">
                        <div class="span121 ">
-                         <h3>Nueva versión 2.0.0 de Struts2 Bootstrap Plugin con soporte para los últimos Bootstrap3 liberado. Migración El cambio de 
-                          Bootstrap2 a la nueva Bootstrap3 no es tan fácil, porque la mayoría de los nombres de clase fue renombrada y el diseño de 
-                          respuesta es ahora la predeterminada. Usted debe leer la Guía Bootstrap3 Migración y probar con cuidado todos sus componentes.
-                          Instalación Google Code ha abandonado el soporte para las descargas. Esa es la razón por la que esta versión sólo está disponible
-                          Instalación Google Code ha abandonado el soporte para las descargas. Esa es la razón por la que esta versión sólo está disponible
-                           Instalación Google Code ha abandonado el soporte para las descargas. Esa es la razón por la que esta versión sólo está disponible
-                           Instalación Google Code ha abandonado el soporte para las descargas. Esa es la razón por la que esta versión sólo está disponible
-                            Instalación Google Code ha abandonado el soporte para las descargas. Esa es la razón por la que esta versión sólo está disponible
-                         </h3>
+                           <legend>Seguimiento de Alumnos</legend>
+                           <table id="seguimientoAlumnos">
+                                <tr>
+                                   <td>Maticula Alumno</td><td><input type="text" id="matricula"></td>
+                               </tr>
+                               <tr>
+                                   <td>Nombre Alumno</td><td><input type="text" id="nombreCompleto"></td>
+                               </tr>
+                              
+                               <tr>
+                                   <td>Apellido Paterno</td><td><input type="text" id="apPaterno"/></td>
+                               </tr>
+                               <tr>
+                                   <td>Apellido Materno</td><td><input type="text" id="apMaterno"/></td>
+                               </tr>
+                               <tr>
+                                   <td>Fecha</td><td><input type="date"/></td>
+                               </tr>
+                               
+                               <tr>
+                                   <td>Comentario</td><td><textarea></textarea></td>
+                               </tr>
+                               <tr>
+                                   <td></td>
+                                   <td><button>Guardar</button></td>
+                               </tr>
+                           </table>
                       </div>
                       
           </div>
