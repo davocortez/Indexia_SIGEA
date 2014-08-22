@@ -89,12 +89,12 @@
                        <div class="span121">
                            <fieldset id="fieldsetProfesor">
                            <legend>Registrar Profesor</legend>
-                           <form>
+                           <form action="accionInsertar" >
                                     <table id="registrarProfesor">
-                                        <input type="text" id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor" />
-                                        <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno"/>
-                                        <input type="text" id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno"/>
-                                        <input type="text" id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor"/>
+                                        <input type="text" id="nombreProfesor" placeholder="Nombre" cssClass="nomAlumno"label="Nombre Profesor"  name="nombre"/>
+                                        <input type="text" id="apellidoPaterno" placeholder="Apellido Paterno" cssClass="apPaterno" label="Apellido Paterno" name="apePaterno"/>
+                                        <input type="text" id="apellidoMaterno" placeholder="Apellido Materno" cssClass="apMaterno" label="Apellido Materno" name="apeMaterno"/>
+                                        <input type="text" id="tipoProfesor" placeholder="TipoProfesor" cssClass="apMaterno" label="Tipo Profesor" name="disponibilidad"/>
        
                                     </table>
                                        <button class="botonRegistrarAlumno">Registrar</button>

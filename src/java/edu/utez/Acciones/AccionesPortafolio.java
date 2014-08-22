@@ -8,7 +8,9 @@ package edu.utez.Acciones;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
+import edu.utez.Bean.BeanProfesor;
 import edu.utez.Dao.DaoPortafolio;
+import edu.utez.Dao.DaoProfesor;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +34,13 @@ public class AccionesPortafolio extends ActionSupport {
         dao.consultaProfesor();
         listaPersonas = dao.consultaProfesor();
 
+        return SUCCESS;
+    }
+     
+     public String registrarProfesores() {
+        DaoPortafolio dao = new DaoPortafolio();
+        BeanProfesor bean=new BeanProfesor();
+        dao.insertar(bean.getNombre(), bean.getApePaterno(), bean.getApeMaterno(),bean.getDisponibilidad());
         return SUCCESS;
     }
     

@@ -25,6 +25,12 @@
         </action>
         <!-- Consultar Profesores en Portafolios -->
         
+        <!-- registrar Profesores en Portafolios -->
+        <action name="accionInsertar" class="edu.utez.Bean.BeanProfesor" method="registrarProfesores">
+            <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
+        </action>
+        <!-- registrar Profesores en Portafolios -->
+        
         
                 <!-- Consultar Asesores -->
         <action name="consultaTutores" class="edu.utez.Acciones.AccionesProfesor" method="consultaAsesores">
