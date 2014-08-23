@@ -16,6 +16,15 @@ public class BeanGrupos {
     private String descripcion;
     private String turno;
     private int estado;
+    private int materiID;
+
+    public int getMateriID() {
+        return materiID;
+    }
+
+    public void setMateriID(int materiID) {
+        this.materiID = materiID;
+    }
 
     public int getIdGrupo() {
         return idGrupo;

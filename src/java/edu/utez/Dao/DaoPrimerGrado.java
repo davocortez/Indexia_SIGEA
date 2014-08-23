@@ -19,10 +19,7 @@ import edu.utez.Bean.BeanProfesor;
  */
 public class DaoPrimerGrado {
 
-    private String sqlComboDhpl = "SELECT profesor.idProfesor,concat(profesor.Nombre,' ',profesor.ApellidoPaterno,' ',profesor.ApellidoMaterno) as\n"
-            + "Nombre FROM Profesor INNER JOIN (Profesor_Especialidad INNER JOIN Especialidad\n"
-            + "ON Profesor_Especialidad.idEspecialidad = Especialidad.idEspecialidad) ON Profesor.idProfesor = \n"
-            + "Profesor_Especialidad.idProfesor WHERE especialidad.Descripcion='Des.Hab.Pens.Matemático';";
+    private String sqlComboDhpl = "SELECT profesor.idProfesor,concat(profesor.Nombre,' ',profesor.ApellidoPaterno,' ',profesor.ApellidoMaterno) as Nombre FROM Profesor INNER JOIN (Profesor_Especialidad INNER JOIN Especialidad ON Profesor_Especialidad.idEspecialidad = Especialidad.idEspecialidad) ON Profesor.idProfesor = Profesor_Especialidad.idProfesor WHERE especialidad.Descripcion='Des.Hab.Pens.Matemático';";
 
     private String salComboSoporte = "SELECT profesor.idProfesor,concat(profesor.Nombre,' ',profesor.ApellidoPaterno,' ',profesor.ApellidoMaterno) as\n"
             + "Nombre FROM Profesor INNER JOIN (Profesor_Especialidad INNER JOIN Especialidad\n"
@@ -72,6 +69,7 @@ public class DaoPrimerGrado {
                 listaDesarolleHabilidades.add(bean);
             }
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return listaDesarolleHabilidades;
     }
@@ -131,7 +129,7 @@ public class DaoPrimerGrado {
         List listaFundamentos = new ArrayList();
         try {
             Connection con = ConexionMySql.getConnection();
-            PreparedStatement ps = con.prepareStatement(sqlOfimatica);
+            PreparedStatement ps = con.prepareStatement(sqlFundamentos);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 BeanProfesor bean = new BeanProfesor();
@@ -176,5 +174,22 @@ public class DaoPrimerGrado {
         } catch (Exception e) {
         }
         return listaIngles;
+    }
+    
+    public List consultaFormacion() {
+        List listaSoporte = new ArrayList();
+        try {
+            Connection con = ConexionMySql.getConnection();
+            PreparedStatement ps = con.prepareStatement(sqlFormacion);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                BeanProfesor bean = new BeanProfesor();
+                bean.setIdProfesor(rs.getInt(1));
+                bean.setNombreProfesor(rs.getString(2));
+                listaSoporte.add(bean);
+            }
+        } catch (Exception e) {
+        }
+        return listaSoporte;
     }
 }
