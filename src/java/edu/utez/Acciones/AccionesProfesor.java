@@ -9,6 +9,7 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import edu.utez.Bean.BeanGrupo;
 import edu.utez.Bean.BeanProfesor;
+import edu.utez.Dao.DaoAsesores;
 import edu.utez.Dao.DaoProfesor;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,17 +18,25 @@ import java.util.List;
  *
  * @author RobertoEnrique
  */
-public class AccionesProfesor extends ActionSupport{
-    
+public class AccionesProfesor extends ActionSupport {
+
     private int idGrupo;
-private int Cuatrimestre;
-private String Grupo;
-private String Descripcion;
-private String Turno;
+    private int Cuatrimestre;
+    private String Grupo;
+    private String Descripcion;
+    private String Turno;
     private String nombreProfesor;
     private int idProfesor;
+    private String Nombre;
+    
+    private String nombre;
+    private String apePaterno;
+    private String apeMaterno;
+
+    
 
     List listaProfesor = new ArrayList();
+
     public void setListaProfesor(List listaProfesor) {
         this.listaProfesor = listaProfesor;
     }
@@ -38,70 +47,25 @@ private String Turno;
         dao.consultaProfesoresModuloProf();
         return SUCCESS;
     }
-    
-    public String registroAsesores(){
+
+    /*Modulo de tutores   Hector flores --combo*/
+    public String registroAsesores() {
         DaoProfesor dao = new DaoProfesor();
         BeanProfesor profesor = new BeanProfesor();
         BeanGrupo grupo = new BeanGrupo();
-        
+
         profesor.setIdProfesor(this.getIdProfesor());
         grupo.setIdGrupo(this.getIdGrupo());
-        System.out.println("id prof: "+idProfesor);
-        System.out.println("id grupo: "+idGrupo);
-        
-        dao.registroAsesores(profesor, grupo); 
+        System.out.println("id prof: " + idProfesor);
+        System.out.println("id grupo: " + idGrupo);
+
+        dao.registroAsesores(profesor, grupo);
         addFieldError("errorVerde", "Registro fallido");
-                return SUCCESS;
-        
-        
-        
-      
-    }
-    
-    /*Modulo de tutores   Hector flores --combo*/
-    /*
-    List ListaProfesoresModulo= new ArrayList();
-
-    public List getListaProfesoresModulo() {
-        return ListaProfesoresModulo;
-    }
-
-    public void setListaProfesoresModulo(List ListaProfesoresModulo) {
-        this.ListaProfesoresModulo = ListaProfesoresModulo;
-    }
-
- 
-    
-    
-    public  String consultarProfesoresModuloProf(){
-            DaoProfesor daop = new DaoProfesor();
-           this.setListaProfesoresModulo(daop.consultaProfesoresModuloProf());
-        return SUCCESS;
-   
-    }
-    
-    /* Consulta tabla profesores
-    
-    List ListaDetallesProfesores=new ArrayList();
-
-    public List getListaDetallesProfesores() {
-        return ListaDetallesProfesores;
-    }
-
-    public void setListaDetallesProfesores(List ListaDetallesProfesores) {
-        this.ListaDetallesProfesores = ListaDetallesProfesores;
-    }
-    
-    public String consultaDetallesProfesor(){
-        DaoProfesor dao= new DaoProfesor();
-        this.setListaDetallesProfesores(dao.DetallesProfesoresModuloProf());
-        
         return SUCCESS;
     }
-    */
-    
+
     List ListaNombreProfesores = new ArrayList();
-    List ListadeGrados= new ArrayList();
+    List ListadeGrados = new ArrayList();
 
     public List getListaNombreProfesores() {
         return ListaNombreProfesores;
@@ -118,13 +82,28 @@ private String Turno;
     public void setListadeGrados(List ListadeGrados) {
         this.ListadeGrados = ListadeGrados;
     }
-    
-       public String consultaAsesores(){
+
+    public String consultaAsesores() {
         DaoProfesor dao = new DaoProfesor();
+        DaoAsesores daoA = new DaoAsesores();
         this.setListaNombreProfesores(dao.consultaProfesoresModuloProf());
         this.setListadeGrados(dao.consultaGradoGrupoProfesores());
+        this.setConsultaProfesoresSelect(daoA.consultaProfesoresSelect());
         return SUCCESS;
     }
+    
+    /* consulta tabla tutores */
+    List consultaProfesoresSelect= new ArrayList();
+
+    public List getConsultaProfesoresSelect() {
+        return consultaProfesoresSelect;
+    }
+
+    public void setConsultaProfesoresSelect(List consultaProfesoresSelect) {
+        this.consultaProfesoresSelect = consultaProfesoresSelect;
+    }
+    
+    
     
 
     public int getIdGrupo() {
@@ -184,11 +163,5 @@ private String Turno;
     }
     
     
-    
-    
-    
-    
-    
-    
-    
+
 }

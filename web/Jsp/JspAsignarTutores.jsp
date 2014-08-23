@@ -6,7 +6,7 @@
 
 <%String context = request.getContextPath();%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <%--<%@taglib  prefix="s" uri="/struts-tags" %>--%>
+ <%@taglib  prefix="s" uri="/struts-tags" %>
 <%--<%@taglib uri="/struts-tags" prefix="s" %>--%>
  
 <!DOCTYPE html>
@@ -53,7 +53,10 @@
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
                                 
-                                <li><s:a action="consultaTutores">Asignar Tutor</s:a>
+                                <s:url id="consultaTutores" action="consultaTutores">
+                                    
+                                </s:url>
+                                <li><s:a href="{%consultaTutores}" >Asignar Tutor</s:a>
                                     </li> 
                                 
                                 <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
@@ -118,36 +121,24 @@
                                        </tr>
                                    </table>
                                    <table id="guardarTutores">
-                                       <tr>
-                                           <td id="nombreTutor">Nombre</td>
-                                           <td id="cuatrimestre">Cuatrimestre</td>
-                                           <td id="grupo">Grupo</td>
-                                       </tr>
-                                       <tr>
-                                       <td id="datosTutores">
-                                       </td>
-                                       <td id="datosTutores">
-                                       </td>
-                                       <td id="datosTutores">
-                                       </td>
-                                       </tr>
+                                       <thead>
+                                           <th id="nombreTutor">Nombre</th>
+                                           <th id="cuatrimestre">Cuatrimestre</th>
+                                           <th id="grupo">Grupo</th>
+                                   </thead>>
+                                       <s:iterator value="consultaProfesoresSelect">
                                        <tr>
                                        <td id="datosTutores">
+                                           <s:property value="nombreProfesor"/>
                                        </td>
                                        <td id="datosTutores">
+                                             <s:property value="Cuatrimestre"/>
                                        </td>
                                        <td id="datosTutores">
+                                             <s:property value="Grupo"/>
                                        </td>
                                        </tr>
-                                       <tr>
-                                       <td id="datosTutores">
-                                       </td>
-                                       <td id="datosTutores">
-                                       </td>
-                                       <td id="datosTutores">
-                                       </td>
-                                       </tr>
-                                           
+                                         </s:iterator>  
                                    </table>
                                </form>
                            </fieldset>   

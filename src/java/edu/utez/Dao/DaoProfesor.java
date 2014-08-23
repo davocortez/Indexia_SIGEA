@@ -126,6 +126,8 @@ public class DaoProfesor {
         return resultado;
     }
     
+      
+      /*
         public List DetallesProfesoresModuloProf() {
         String consulta="select p.`Cuatrimestre`,p.`Grupo`,p2.`idProfesor`,p2.`Nombre`from grupo as p inner join asignacion_materia as a on p.`idGrupo`=a.`idGrupo` inner join profesor as p2 on a.`idProfesor`=p2.`idProfesor`;";
         List listaTutores = new ArrayList();
@@ -153,4 +155,6 @@ public class DaoProfesor {
         }
         return listaTutores;
     }
+      
+      */
 }

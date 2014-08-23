@@ -53,6 +53,10 @@
 
         <div id="ad" style="width:100%; margin-top:50px;">
         </center>
+        
+        <s:form action="consultaTutores">
+            <s:submit value="Enviar"/>
+        </s:form>
     </div>
 </body>
 </html>
