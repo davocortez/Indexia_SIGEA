@@ -60,7 +60,9 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspAsignarTutores.jsp"> Asignar Tutor </a></li> 
+                                <s:url id="consultaTutores" action="consultaTutores">                                    
+                                </s:url>
+                                <li><s:a href="{%consultaTutores}" >Asignar Tutor</s:a></li>  
                                 <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 

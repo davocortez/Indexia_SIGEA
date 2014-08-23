@@ -7,9 +7,18 @@
     <constant name="struts devMode" value="true"/>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
-        <action name="consultaMate" class="edu.utez.Acciones.AccionesMaterias" method="consultaMaterias">
-            <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
+        
+        <!-- 1er Cuatrimestre -->
+        <action name="consultaMate" class="edu.utez.Acciones.AccionesGrupo" method="consultarPrimero">
+            <result name="success">/Jsp/Jsp1erCuatri.jsp</result>
         </action>
+        <!-- 1er Cuatrimestre -->
+        
+        <!-- 2do Cuatrimestre -->
+        <action name="consultaMate" class="edu.utez.Acciones.AccionesGrupo" method="consultarPrimero">
+            <result name="success">/Jsp/Jsp2cuatri.jsp</result>
+        </action>
+        <!-- 2do Cuatrimestre -->
         
         <action name="consultaProfe" class="edu.utez.Acciones.AccionesProfesor" method="consultarProfesor">
             <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
@@ -34,12 +43,9 @@
         
                 <!-- Consultar Asesores -->
         <action name="consultaTutores" class="edu.utez.Acciones.AccionesProfesor" method="consultaAsesores">
-            <result name="success">/Jsp/JspAsignarTutores.jsp</result>
-               <result name="input">/Jsp/JspAsignarTutores.jsp</result>
+            <result >/Jsp/JspAsignarTutores.jsp</result>
         </action>
-        <!--  -->
-        
-        
+        <!--Consultar Asesores -->
                         <!-- Registro Asesores -->
         <action name="RegistrarAsesores" class="edu.utez.Acciones.AccionesProfesor" method="registroAsesores">
             <result name="success">/Jsp/JspAsignarTutores.jsp</result>

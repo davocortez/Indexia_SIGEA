@@ -56,7 +56,6 @@ public class DaoPortafolio {
         boolean status=false;
         String idProfe = "";
         try {
-
             Connection con = ConexionMySql.getConnection();
             PreparedStatement ps = con.prepareStatement(registrar,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, nombre);

@@ -52,7 +52,9 @@
                             <a  href= "#" > Tutores </a> 
                             <ul> 
                                 <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspAsignarTutores.jsp"> Asignar Tutor </a></li> 
+                                 <s:url id="consultaTutores" action="consultaTutores">                                    
+                                </s:url>
+                                <li><s:a href="{%consultaTutores}" >Asignar Tutor</s:a></li> 
                                 <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
                                 <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
                             </ul> 
@@ -61,8 +63,10 @@
                             <a href="">Profesores</a>
                             <ul>
                                 <li><a  href="<%=context%>/Jsp/JspAltaProfesores.jsp">Registrar Profesor</a></li> 
-                                <li><a href="<%=context%>/Jsp/JspAsignarEspecialidad.jsp">Asignar Especialidad<li></a>
-                                <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
+                                <li><a href="<%=context%>/Jsp/JspAsignarEspecialidad.jsp">Asignar Especialidad</a><li>
+                                <li><s:url id="consultarProfesoresPortafolio" action="consultarProfesoresPortafolio">
+                                    </s:url>
+                                <a href="%{consultarProfesoresPortafolio}">Entrega de Portafolios </a></li>  
                             </ul>
                         </li>
                        

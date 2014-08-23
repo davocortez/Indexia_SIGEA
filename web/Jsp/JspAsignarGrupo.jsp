@@ -41,51 +41,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="span12 ">
-                    <ul  class = "slimmenu" >
-                        <li><a href="<%=context%>/Jsp/JspAltaGrupos.jsp"> Grupos </a>                                                        
-                            <ul> 
-                                <li><a  href="<%=context%>/Jsp/JspAltaGrupos.jsp" > Alta Grupos </a></li> 
-                            </ul> 
-                        </li>        
-                        <li> 
-                            <a  href= "#" > Tutores </a> 
-                            <ul> 
-                                <li><a  href= "<%=context%>/Jsp/JspAsignarGrupo.jsp"> Asignar Grupo </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspAsignarTutores.jsp"> Asignar Tutor </a></li> 
-                                <li><a  href= "<%=context%>/Jsp/JspSeguimientodeAlumnos.jsp"> Seguimiento de Alumnos </a> </li>
-                                <li><a  href="<%=context%>/Jsp/JspGenerarReporte.jsp"  > Generar Reporte </a> </li> 
-                            </ul> 
-                        </li> 
-                        <li>
-                            <a href="">Profesores</a>
-                            <ul>
-                                <li><a  href="<%=context%>/Jsp/JspAltaProfesores.jsp">Registrar Profesor</a></li> 
-                                <li><a href="<%=context%>/Jsp/JspAsignarEspecialidad.jsp">Asignar Especialidad<li></a>
-                                <li><a  href="<%=context%>/Jsp/JspEntregarPortafolio.jsp">Entrega de Portafolios </a></li> 
-                            </ul>
-                        </li>
-                       
-                        <li><a  href="<%=context%>/Jsp/JspLogin.jsp">Cerrar Sesión</a></li>
-                        
-                    </ul>
-                </div>
-            </div> 
-            <script src="<%=context%>/bootstrap/js/jquery.slimmenu.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-              <script type="text/javascript"src="<%=context%>/Js/Validaciones.js"></script>
-            <script type="text/javascript">
-                $('ul.slimmenu').slimmenu(
-                        {
-                            resizeWidth: '800',
-                            collapserTitle: 'Menu',
-                            easingEffect: 'easeInOutQuint',
-                            animSpeed: 'medium',
-                            indentChildren: true,
-                            childrenIndenter: '&raquo;'
-                        });
-            </script>
+                 <s:include value="/Jsp/Menu.jsp"></s:include>
 
+            </div>
             <div class="row">
                 <div class="span121 ">
                     <h3>Nueva versión 2.0.0 de Struts2 Bootstrap Plugin con soporte para los últimos Bootstrap3 liberado. Migración El cambio de 

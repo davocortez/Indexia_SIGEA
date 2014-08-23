@@ -37,11 +37,6 @@ public class AccionesPortafolio extends ActionSupport {
         return SUCCESS;
     }
      
-     public String registrarProfesores() {
-        DaoPortafolio dao = new DaoPortafolio();
-        BeanProfesor bean=new BeanProfesor();
-        dao.insertar(bean.getNombre(), bean.getApePaterno(), bean.getApeMaterno(),bean.getDisponibilidad());
-        return SUCCESS;
-    }
+     
     
 }
