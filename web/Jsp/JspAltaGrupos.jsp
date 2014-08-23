@@ -64,7 +64,7 @@
                                             <td><s:property value="Grupo"/></td>
                                             <td><s:property value="Descripcion"/></td>
                                             <td><s:property value="Turno"/></td>
-                                            <td><input name="chk" type="checkbox"/></td>                                                                              
+                                            <td><s:url id ="altaGrupo" action="%{AltaGrupo}%"></s:url></td>                                                 
                                                 <%contador++;%>
                                         </tr>                                                                          
                                 </s:iterator>

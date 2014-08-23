@@ -51,20 +51,20 @@
 
                     <fieldset id="fieldsetProfesor">
                         <legend>Registrar Profesor</legend>
-                        <form>
+                        <form action="accionInsertar">
                             <table id="registrarProfesor">
                                 <tr>
-                                    <td>Nombre Profesor</td><td><input type="text" id="nombreProfesor"/></td>  
+                                    <td>Nombre Profesor</td><td><input type="text" id="nombreProfesor" name="nombre"/></td>  
 
                                 </tr> 
                                 <tr>
-                                    <td>Apellido Paterno</td><td><input type="text" id="apellidoPaterno" /></td>
+                                    <td>Apellido Paterno</td><td><input type="text" id="apellidoPaterno" name="apePaterno" /></td>
                                 </tr>
                                 <tr>
-                                    <td>Apellido Materno</td><td> <input type="text" id="apellidoMaterno"/></td>
+                                    <td>Apellido Materno</td><td> <input type="text" id="apellidoMaterno" name="apeMaterno"/></td>
                                 </tr>
                                 <tr>
-                                    <td>Tipo Profesor</td><td><input type="text" id="tipoProfesor"/></td>
+                                    <td>Tipo Profesor</td><td><input type="text" id="tipoProfesor" name="disponibilidad"/></td>
                                 </tr>
                             </table>
                             <button class="botonRegistrarAlumno">Registrar</button>

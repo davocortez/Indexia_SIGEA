@@ -9,6 +9,7 @@ package edu.utez.Dao;
 import Utilerias.ConexionMySql;
 import edu.utez.Bean.BeanGrupo;
 import edu.utez.Bean.BeanProfesor;
+import edu.utez.Bean.BeanTutor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,13 +29,11 @@ public class DaoAsesores {
             PreparedStatement ps = con.prepareStatement(consulta);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                BeanProfesor profesor = new BeanProfesor();
-                BeanGrupo grupo = new BeanGrupo();
-                profesor.setNombreProfesor(rs.getString(1));
-                grupo.setCuatrimestre(rs.getInt(2));
-                grupo.setGrupo(rs.getString(3));
-                listaAsesoresSelec.add(profesor);
-                listaAsesoresSelec.add(grupo);
+                BeanTutor tutor = new BeanTutor();
+                tutor.setNombre(rs.getString(1));
+                tutor.setCuatrimestre(rs.getString(2));
+                tutor.setGrupo(rs.getString(3));
+                listaAsesoresSelec.add(tutor);
             }
             ps.close();
             con.close();

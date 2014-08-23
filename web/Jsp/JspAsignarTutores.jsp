@@ -82,13 +82,13 @@
                                        <s:iterator value="consultaProfesoresSelect">
                                        <tr>
                                        <td id="datosTutores">
-                                           <s:property value="nombreProfesor"/>
+                                           <s:property value="nombre"/>
                                        </td>
                                        <td id="datosTutores">
-                                             <s:property value="Cuatrimestre"/>
+                                             <s:property value="cuatrimestre"/>
                                        </td>
                                        <td id="datosTutores">
-                                             <s:property value="Grupo"/>
+                                             <s:property value="grupo"/>
                                        </td>
                                        </tr>
                                          </s:iterator>  

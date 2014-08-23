@@ -45,13 +45,12 @@
         <action name="consultaTutores" class="edu.utez.Acciones.AccionesProfesor" method="consultaAsesores">
             <result >/Jsp/JspAsignarTutores.jsp</result>
         </action>
-        <!--Consultar Asesores -->
+                 <!--Consultar Asesores -->
                         <!-- Registro Asesores -->
         <action name="RegistrarAsesores" class="edu.utez.Acciones.AccionesProfesor" method="registroAsesores">
             <result name="success">/Jsp/JspAsignarTutores.jsp</result>
-               <result name="input">/Jsp/JspAsignarTutores.jsp</result>
         </action>
-        <!--- -->
+                        <!-- Registro Asesores -->
     </package>  
     
       
