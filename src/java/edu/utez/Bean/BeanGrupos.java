@@ -5,6 +5,9 @@
  */
 package edu.utez.Bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author RobertoEnrique
@@ -12,11 +15,38 @@ package edu.utez.Bean;
 public class BeanGrupos {
 
     private int idGrupo;
-    private int grupo;
+    private String cuatrimestre;
+    private String grupo;
     private String descripcion;
     private String turno;
     private int estado;
     private int materiID;
+
+    List listaGrupos = new ArrayList();
+
+    public List getListaGrupos() {
+        return listaGrupos;
+    }
+
+    public void setListaGrupos(List listaGrupos) {
+        this.listaGrupos = listaGrupos;
+    }
+
+    public String getCuatrimestre() {
+        return cuatrimestre;
+    }
+
+    public void setCuatrimestre(String cuatrimestre) {
+        this.cuatrimestre = cuatrimestre;
+    }
+
+    public String getGrupo() {
+        return grupo;
+    }
+
+    public void setGrupo(String grupo) {
+        this.grupo = grupo;
+    }
 
     public int getMateriID() {
         return materiID;
@@ -32,14 +62,6 @@ public class BeanGrupos {
 
     public void setIdGrupo(int idGrupo) {
         this.idGrupo = idGrupo;
-    }
-
-    public int getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(int grupo) {
-        this.grupo = grupo;
     }
 
     public String getDescripcion() {

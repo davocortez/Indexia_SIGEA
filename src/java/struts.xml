@@ -8,28 +8,20 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         
-        <!-- 1er Cuatrimestre -->
-        <action name="consultaMate" class="edu.utez.Acciones.AccionesGrupo" method="consultarPrimero">
-            <result name="success">/Jsp/Jsp1erCuatri.jsp</result>
-        </action>
-        <!-- 1er Cuatrimestre -->
-        
-        <!-- 2do Cuatrimestre -->
-        <action name="consultaMate" class="edu.utez.Acciones.AccionesGrupo" method="consultarPrimero">
-            <result name="success">/Jsp/Jsp2cuatri.jsp</result>
-        </action>
+       
         <!-- 2do Cuatrimestre -->
         
         <action name="consultaProfe" class="edu.utez.Acciones.AccionesProfesor" method="consultarProfesor">
             <result name="success">/Jsp/JspAsignarHorarios.jsp</result>
         </action>
         
-        <action name="consultarGrupos" class="edu.utez.Acciones.AccionesGrupo" method="consultarGrupos">
-            <result name="success">/Jsp/JspAltaGrupos.jsp</result>
-        </action>
+       
         
-        <!-- Consultar Profesores en Portafolios -->
+        <!-- ******************************** Portafolios *********************************************-->
         <action name="consultarProfesoresPortafolio" class="edu.utez.Acciones.AccionesPortafolio" method="consultarProfesores">
+            <result name="success">/Jsp/JspEntregarPortafolio.jsp</result>
+        </action>
+        <action name="modificarPortafolio" class="edu.utez.Acciones.AccionesPortafolio" method="actualizarEstado">
             <result name="success">/Jsp/JspEntregarPortafolio.jsp</result>
         </action>
         <!-- Consultar Profesores en Portafolios -->
@@ -57,6 +49,15 @@
             <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
         </action>
         <!-- Registro de Especialidad en profesores -->
+        <!-- Registro de Grupos -->
+        <action name="RegistrarGrupos" class="edu.utez.Acciones.AccionesGrupos" method="insertarGrupo">
+            <result name="success">/Jsp/JspAltaGrupos.jsp</result>
+        </action>
+        <action name="consultaGrupos" class="edu.utez.Acciones.AccionesGrupos" method="consultaGrupo">
+            <result name="success">/Jsp/JspAltaGrupos.jsp</result>
+        </action>
+        
+        <!-- Registro de Grupos -->
 
 
     </package>  

@@ -13,8 +13,9 @@
     <head>
         <%@taglib prefix="s" uri="/struts-tags" %>
         <title>JSPEntregaPortafolio</title>
-        <meta name="viewport" content="width=device-width intial-scale=1.0 "
-              <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width intial-scale=1.0 " />
+        <link href="<%=context%>/Css/css_main.css" rel="stylesheet" type="text/css" />
+        <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
@@ -71,37 +72,47 @@
                                 </tr>
                             <tbody>
                             <s:iterator var="listaPortafolios" value="listaProfesores">
+                            
                                 <tr>
                                     <td id="datos" > 
+                                        <input value="<s:property value="idProfesor"/>" type="hidden" name="idProfesor">
                                         <s:property value="nombreProfesor"/>
-
                                     </td>
                                     <td id="datos">
                                         <s:iterator var="bean" value="portafolios">
+                                            
+                                            <input value="<s:property value="#bean.idReportes"/>" type="hidden" name="idReporte"/>
                                             <s:if test="#bean.estado == 1">
-                                                <button class="btn btn-danger">entregar</button>
+                                                <form action="modificarPortafolio">
+                                                    <input value="<s:property value="#bean.idReportes"/>" type="hidden" name="idReporte"/>
+                                                    Portafolio <s:property value="#bean.descripcion"/> <button class="btn btn-danger">entregar</button>
+                                                </form>
                                             </s:if>
                                             <s:else>
-                                                <button class="btn btn-success">listo</button>
+                                                <form>
+                                                    Portafolio <s:property value="#bean.descripcion"/><button class="btn btn-success">listo</button>
+                                                </form>
+                                                
                                             </s:else>
-                                        <s/>
+                                            
                                         </s:iterator>
-                                        </td>
-                                        </tr>
-                                        </s:iterator>
-                                        </tbody>    
-                                    </table>
-                                </div>
+                                    </td>
+                                </tr>
+                            
+                            </s:iterator>
+                            </tbody>    
+                    </table>
+                </div>
 
-                            </div>
-                            <div class="row">
-                                <div class="hero-unit">
+            </div>
+            <div class="row">
+                <div class="hero-unit">
 
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
 
-                    </body>
-                </html>
+    </body>
+</html>
 
 

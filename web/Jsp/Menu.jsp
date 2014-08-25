@@ -25,7 +25,9 @@
             <ul  class = "slimmenu" >
                 <li><a href="<%=context%>/Jsp/JspAltaGrupos.jsp"> Grupos </a>                                                        
                     <ul> 
-                        <li><a  href="<%=context%>/Jsp/JspAltaGrupos.jsp" > Alta Grupos </a></li> 
+                        <s:url id="consultaGrupos" action="consultaGrupos">                                    
+                        </s:url>
+                        <li><s:a href="%{consultaGrupos}" > Alta Grupos </s:a></li> 
                     </ul> 
                 </li>        
                 <li> 

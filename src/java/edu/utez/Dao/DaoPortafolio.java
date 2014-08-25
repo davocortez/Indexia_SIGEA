@@ -29,8 +29,9 @@ public class DaoPortafolio {
     private String sqlTraerId = "SELECT idProfesor  FROM profesor WHERE CONCAT(Nombre,ApellidoPaterno,ApellidoMaterno) = ?;";
     String registrar = "iNSERT INTO profesor (`Nombre`, `ApellidoPaterno`, `ApellidoMaterno`,tipoDisponibilidad)"
             + " VALUES (?,?,?,?);";
-    String registrarPortafolio = " INSERT INTO portafolio(`idProfesor`) values (?);";
-    String entregar="UPDATE portafolio set estado=0 where idProfesor=? and idReportes=?;";
+    String registrarPortafolio = " INSERT INTO portafolio(`idProfesor`,`tipo`) values (?,?);";
+    String entregar = "UPDATE portafolio set estado=0 where idReportes=?;";
+
     public List consultaProfesor() {
         List listaProfesor = new ArrayList();
         try {
@@ -77,6 +78,7 @@ public class DaoPortafolio {
             PreparedStatement ps2 = con2.prepareStatement(registrarPortafolio);
             for (int i = 0; i < 4; i++) {
                 ps2.setString(1, idProfe);
+                ps2.setString(2, i+1+"");
 
                 status = ps2.executeUpdate() == 1;
             }
@@ -96,7 +98,9 @@ public class DaoPortafolio {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 BeanPortafolio bean = new BeanPortafolio();
-                bean.setEstado(rs.getString(3));
+                bean.setIdReportes(rs.getString(2));
+                bean.setDescripcion(rs.getString(3));
+                bean.setEstado(rs.getString(4));
                 listaPortafolios.add(bean);
             }
             ps.close();
@@ -107,19 +111,23 @@ public class DaoPortafolio {
         }
         return listaPortafolios;
     }
-    
-    public boolean modificar(String idProfesor,String idReporte){
-    
+
+    public boolean modificar(String idReporte) {
+
         boolean status = false;
-    try {
+        try {
             Connection con = ConexionMySql.getConnection();
             PreparedStatement ps = con.prepareStatement(entregar);
-            ps.setString(1, idProfesor);
-            ps.setString(2, idReporte);
-             } catch (SQLException ex) {
+            ps.setString(1, idReporte);
+
+            status = ps.executeUpdate() == 1;
+            ps.close();
+            con.close();
+            
+        } catch (SQLException ex) {
             Logger.getLogger(DaoPortafolio.class.getName()).log(Level.SEVERE, null, ex);
         }
-    return status;
+        return status;
     }
 
 }

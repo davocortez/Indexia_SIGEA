@@ -63,8 +63,13 @@
                                     <td> <input type="text" id="apellidoMaterno" name="apeMaterno"/></td>
                                 </tr>
                                 <tr class="span10">
-                                    <td class="span10">Tipo Profesor</td>
-                                    <td><input type="text" id="tipoProfesor" name="disponibilidad"/></td>
+                                    <td class="span10">Tipo</td>
+                                    <td>
+                                        <select  name="disponibilidad">
+                                            <option>Apoyo</option>
+                                            <option>Tiempo Completo</option>
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr class="span10">
                                     <td><button class="btn btn-primary">Registrar</button></td>

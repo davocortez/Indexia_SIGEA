@@ -25,6 +25,17 @@ public class AccionesPortafolio extends ActionSupport {
 
     private String idProfesor;
     private String estado;
+    private String idReporte;
+    
+
+    public String getIdReporte() {
+        return idReporte;
+    }
+
+    public void setIdReporte(String idReporte) {
+        this.idReporte = idReporte;
+    }
+    
 
     public List getListaProfesores() {
         return listaProfesores;
@@ -34,8 +45,6 @@ public class AccionesPortafolio extends ActionSupport {
         this.listaProfesores = listaProfesores;
     }
 
-    
-    
     public List getListaPortafolios() {
         return listaPortafolios;
     }
@@ -73,8 +82,7 @@ public class AccionesPortafolio extends ActionSupport {
         String nombreProfesor = "";
         DaoPortafolio dao = new DaoPortafolio();
         listaPersonas = dao.consultaProfesor();
-        
-        
+
         for (int i = 0; i < listaPersonas.size(); i++) {
             idProfesor = listaPersonas.get(i).getIdProfesor() + "";
             nombreProfesor = listaPersonas.get(i).getNombreProfesor();
@@ -85,16 +93,17 @@ public class AccionesPortafolio extends ActionSupport {
             bean.setPortafolios(listaPortafolios);
             listaProfesores.add(bean);
         }
-        
-        for (int i = 0; i < listaProfesores.size(); i++) {
-            System.out.println(" tamaño "+i);
-        }
 
+        for (int i = 0; i < listaProfesores.size(); i++) {
+            System.out.println(" tamaño " + i);
+        }
         return SUCCESS;
     }
-        public String actualizarEstado() {
+
+    public String actualizarEstado() {
+        DaoPortafolio dao = new DaoPortafolio();
+        dao.modificar(idReporte);
+        consultarProfesores();
         return SUCCESS;
-        }
-
-
+    }
 }

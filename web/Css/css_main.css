@@ -39,3 +39,247 @@ legend {
     padding-top: -50px;
 }
 
+
+#nombreProfesor{
+    margin-top: 1%;
+    
+    border-radius:5px;
+    
+}
+#apellidoPaterno{
+    
+    margin-top:7%;
+    
+    border-radius:5px;
+}
+#apellidoMaterno{
+    margin-top: 7%;
+    border-radius:5px;
+}
+
+#tipoProfesor{
+    margin-top: 7%;
+    border-radius:5px;
+}
+
+#registrarProfesor{
+    margin-left: 20%;
+}
+
+#fieldsetProfesor{
+    margin-top:3%;
+    width: 50%;
+    margin-left:22%;
+    border-radius: 8px;
+    box-shadow: 14px 11px 22px #000000;
+}
+
+.botonRegistrarAlumno{
+    margin-left:45%;
+    margin-top: 5%;
+    border-radius: 5px;
+    width:15%;
+}
+
+#entregaPortafolio{
+    margin-left:14%;
+    width:70%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+
+#profeNombre{
+    width:50%;
+    margin-left:20%; 
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#portafolio{
+    padding-left:20%;
+}
+
+#datos1Cuatri{
+    margin-left:12%;
+    margin-top:5%;
+    
+
+}
+#no{
+    width:5%; 
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+    
+}
+
+#label1erCuatri{
+    margin-top: 2%;
+    margin-left:45%;
+    font-family: miFuente3;
+    font-size:30px;
+}
+
+#materia{
+    width:42%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+    
+}
+#profesor{
+    text-align: center;
+    width:48%; 
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+
+#hora{
+    
+    text-align: center;
+    width:30%; 
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+
+}
+#totalHoras{
+    text-align: center;
+    padding-top:20px;
+    border:1px;
+    background:#ADD8E6;
+    color:#003399;
+    font-size: 20px;
+}
+
+
+#datos{
+    padding-top:50px;
+ 
+    background:#ADD8E6;
+}
+
+#seguimientoAlumnos{
+    margin-left:30%;
+}
+
+#nombreCompleto{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+    
+}
+
+#matricula{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+    
+}
+
+#apPaterno{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+   
+}
+#apMaterno{
+    border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px;
+}
+#asignarProfesor{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px; 
+}
+#tutor{
+     border-radius: 10px;
+    -o-border-radius:10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius:10px; 
+}
+#especialidad{
+    margin-left:25%;
+    width: 40%;
+    border-radius: 10px;
+}
+#especialidadProfe{
+    margin-left:20%; 
+}
+#tablaEspecialidad{
+    margin-top:3%; 
+    margin-left:30%;
+}
+#especialidadTabla{
+    margin-left:26%;
+    margin-top:3%;
+    width:42%;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#guardarTutores{
+     margin-left:2%;
+    margin-top:5%;
+    
+}
+#datosTutores{
+    padding-top: 20px;
+    background:#ADD8E6;
+}
+#nombreTutor{
+    width:42%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#cuatrimestre{
+    width:20%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#grupo{
+    width:42%;
+    text-align: center;
+    background:#6495ED;
+    color:#fff;
+    font-size:16px;
+}
+#asignarTutores{
+    margin-left:30%;
+}
+#tutores{
+    margin-left:25%; 
+    width:40%;
+    border-radius: 10px;
+    -o-borde-radius:10px;
+    -ms-border-radius:10px;
+    -moz-border-radius:10px;
+}
+
+#datosEspecialidad{
+    padding-top:60px; 
+    width: 30%;
+    background: white;
+    background:#ADD8E6;
+}
+
+.botonRegistrarProfesor{
+    margin-right:50%;
+    border-radius: 5px;
+
+}

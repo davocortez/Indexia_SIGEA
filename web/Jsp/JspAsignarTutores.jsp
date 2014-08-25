@@ -74,7 +74,7 @@
                                     <td class="span1">
                                         <s:property value="cuatrimestre"/>
                                     </td>
-                                    <td class="span2">
+                                    <td class="span1">
                                         <s:property value="grupo"/>
                                     </td>
                                 </tr>
