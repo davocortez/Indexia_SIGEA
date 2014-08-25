@@ -36,21 +36,29 @@
         
         <!-- registrar Profesores en Portafolios -->
         <action name="accionInsertar" class="edu.utez.Bean.BeanProfesor" method="registrarProfesores">
-            <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
+            <result name="success">/Jsp/JspAltaProfesores.jsp</result>
         </action>
         <!-- registrar Profesores en Portafolios -->
         
         
-                <!-- Consultar Asesores -->
+        <!-- Consultar Asesores -->
         <action name="consultaTutores" class="edu.utez.Acciones.AccionesProfesor" method="consultaAsesores">
             <result >/Jsp/JspAsignarTutores.jsp</result>
         </action>
-                 <!--Consultar Asesores -->
-                        <!-- Registro Asesores -->
+        <!--Consultar Asesores -->
+        <!-- Registro Asesores -->
         <action name="RegistrarAsesores" class="edu.utez.Acciones.AccionesProfesor" method="registroAsesores">
             <result name="success">/Jsp/JspAsignarTutores.jsp</result>
         </action>
-                        <!-- Registro Asesores -->
+        <!-- Registro Asesores -->
+                        
+        <!-- Registro de Especialidad en profesores -->
+        <action name="consultaEspecialidad" class="edu.utez.Acciones.AccionesEspecialidad" method="consultarProfesores">
+            <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
+        </action>
+        <!-- Registro de Especialidad en profesores -->
+
+
     </package>  
     
       

@@ -60,6 +60,7 @@ public class AccionesProfesor extends ActionSupport {
         System.out.println("id grupo: " + idGrupo);
 
         dao.registroAsesores(profesor, grupo);
+        consultaAsesores();
         addFieldError("errorVerde", "Registro fallido");
         return SUCCESS;
     }

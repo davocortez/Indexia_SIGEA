@@ -7,6 +7,8 @@ package edu.utez.Bean;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import edu.utez.Dao.DaoPortafolio;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -20,6 +22,15 @@ public class BeanProfesor {
     private String apePaterno;
     private String apeMaterno;
     private String disponibilidad;
+    private List portafolios = new ArrayList();
+
+    public List getPortafolios() {
+        return portafolios;
+    }
+
+    public void setPortafolios(List portafolios) {
+        this.portafolios = portafolios;
+    }
 
     public String getDisponibilidad() {
         return disponibilidad;

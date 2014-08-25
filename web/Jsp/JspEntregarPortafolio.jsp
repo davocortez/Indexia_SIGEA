@@ -52,43 +52,56 @@
                 </div>
             </div>
             <div class="row">
-                 <s:include value="/Jsp/Menu.jsp"></s:include>
+                <s:include value="/Jsp/Menu.jsp"></s:include>
+                </div>
 
-            </div>
+                <div class="row">
+                    <div class="span121">
+                        <legend >Entrega de Portafolios</legend>
 
-            <div class="row">
-                <div class="span121">
-                    <legend >Entrega de Portafolios</legend>
-                    <table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
-                        <thead>
-                            <tr>
-                                <th name="nombre">
-                                    Nombre Profesor:
-                                </th>
-                                <th name="nombre">
-                                    Portafolio
-                                </th>
-                            </tr>
-                        <tbody>
-                            <s:iterator value="listaPersonas">
+                        <table  class="table table-striped">
+                            <thead>
                                 <tr>
-                                    <td id="datos"> <s:property value="nombreProfesor"/></td>
-                                    <td id="datos"></td>
+                                    <th name="nombre">
+                                        Nombre Profesor:
+                                    </th>
+                                    <th name="nombre">
+                                        Portafolio
+                                    </th>
                                 </tr>
-                            </s:iterator>
-                        </tbody>    
-                    </table>
-                </div>
+                            <tbody>
+                            <s:iterator var="listaPortafolios" value="listaProfesores">
+                                <tr>
+                                    <td id="datos" > 
+                                        <s:property value="nombreProfesor"/>
 
-            </div>
-            <div class="row">
-                <div class="hero-unit">
+                                    </td>
+                                    <td id="datos">
+                                        <s:iterator var="bean" value="portafolios">
+                                            <s:if test="#bean.estado == 1">
+                                                <button class="btn btn-danger">entregar</button>
+                                            </s:if>
+                                            <s:else>
+                                                <button class="btn btn-success">listo</button>
+                                            </s:else>
+                                        <s/>
+                                        </s:iterator>
+                                        </td>
+                                        </tr>
+                                        </s:iterator>
+                                        </tbody>    
+                                    </table>
+                                </div>
 
-                </div>
-            </div>
-        </div>
+                            </div>
+                            <div class="row">
+                                <div class="hero-unit">
 
-    </body>
-</html>
+                                </div>
+                            </div>
+                        </div>
+
+                    </body>
+                </html>
 
 

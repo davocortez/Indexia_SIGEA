@@ -12,9 +12,9 @@
 <html>
     <head>
         <title>JSPEntregaPortafolio</title>
-        <meta name="viewport" content="width=device-width intial-scale=1.0 "
-
-              <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width intial-scale=1.0 " />
+        <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <link href="<%=context%>/Css/css_main.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
@@ -42,36 +42,37 @@
                 </div>
             </div>
             <div class="row">
-                 <s:include value="/Jsp/Menu.jsp"></s:include>
-
+                <s:include value="/Jsp/Menu.jsp"></s:include>
             </div>
             <div class="row">
-                <div class="span121">
-
-
-                    <fieldset id="fieldsetProfesor">
-                        <legend>Registrar Profesor</legend>
-                        <form action="accionInsertar">
-                            <table id="registrarProfesor">
-                                <tr>
-                                    <td>Nombre Profesor</td><td><input type="text" id="nombreProfesor" name="nombre"/></td>  
-
+                <div class="span12">
+                    <form action="accionInsertar">
+                        <fieldset  class="span10">
+                            <legend >Registrar Profesor</legend>
+                            <table  class="table">
+                                <tr class="span10">
+                                    <td class="span10">Nombre Profesor</td>
+                                    <td><input type="text" id="nombreProfesor" name="nombre"/></td>  
                                 </tr> 
-                                <tr>
-                                    <td>Apellido Paterno</td><td><input type="text" id="apellidoPaterno" name="apePaterno" /></td>
+                                <tr class="span10">
+                                    <td class="span10">Apellido Paterno</td>
+                                    <td><input type="text" id="apellidoPaterno" name="apePaterno" /></td>
                                 </tr>
-                                <tr>
-                                    <td>Apellido Materno</td><td> <input type="text" id="apellidoMaterno" name="apeMaterno"/></td>
+                                <tr class="span10">
+                                    <td class="span10">Apellido Materno</td>
+                                    <td> <input type="text" id="apellidoMaterno" name="apeMaterno"/></td>
                                 </tr>
-                                <tr>
-                                    <td>Tipo Profesor</td><td><input type="text" id="tipoProfesor" name="disponibilidad"/></td>
+                                <tr class="span10">
+                                    <td class="span10">Tipo Profesor</td>
+                                    <td><input type="text" id="tipoProfesor" name="disponibilidad"/></td>
+                                </tr>
+                                <tr class="span10">
+                                    <td><button class="btn btn-primary">Registrar</button></td>
                                 </tr>
                             </table>
-                            <button class="botonRegistrarAlumno">Registrar</button>
-                        </form>
-                    </fieldset>
+                        </fieldset>
+                    </form>
                 </div>
-
             </div>
             <div class="row">
                 <div class="hero-unit">

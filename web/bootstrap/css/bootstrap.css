@@ -1529,23 +1529,6 @@ form {
     margin: 0 0 20px;
 }
 
-
-
-legend {
-    display: block;
-    margin-top: 2%;
-    padding: 0;
-    font-family: miFuente3;
-    margin-bottom: 20px;
-    font-size:30px;
-    margin-left:40%;
-    line-height: 40px;
-    color: #333333;
-    border: 0;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-
 legend small {
     font-size: 15px;
     color: #999999;

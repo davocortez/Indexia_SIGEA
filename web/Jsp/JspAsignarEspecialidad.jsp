@@ -42,26 +42,28 @@
             </div>
             <div class="row">
                 <s:include value="/Jsp/Menu.jsp"></s:include>
-            </div> 
+                </div> 
 
 
-            <div class="row">
-                <div class="span121 ">
-                    <legend>Asignar Especialidad</legend>
-                    <fieldset id="especialidad">
-                        <table id="especialidadProfe">
+                <div class="row">
+                    <div class="span121 ">
+                        <legend>Asignar Especialidad</legend>
+                        <fieldset id="especialidad">
+                            <table id="especialidadProfe">
+                                <tr>
+                                    <td>Profesor</td><td><input type="text" id="buscarProfesor"></td><td><button>Buscar</button></td>
+                                </tr>
+                            </table>
+                        </fieldset>   
+                        <table id="tablaEspecialidad">
                             <tr>
-                                <td>Profesor</td><td><input type="text" id="buscarProfesor"></td><td><button>Buscar</button></td>
+                                <td><input type="hidden" placeholder="id Profesor"/></td>
                             </tr>
-                        </table>
-                    </fieldset>   
-                    <table id="tablaEspecialidad">
-                        <tr>
-                            <td><input type="hidden" placeholder="id Profesor"/></td>
-                        </tr>
-                        <tr>
-                            <td>Nombre</td><td><input type="text" id="nombreCompleto"></td>
+                            <tr>
+                            <s:select list="ListaNombreProfesores" name="idProfesor" listKey="idProfesor" listValue="nombreProfesor" 
+                                      headerKey="0" headerValue="Seleccione un profesor:">
 
+                            </s:select> 
                         </tr>
                         <tr>
                             <td>Especialidad</td><td><select><option value="html"></option></select></td>
