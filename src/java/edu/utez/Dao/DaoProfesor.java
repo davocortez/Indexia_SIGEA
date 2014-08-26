@@ -6,7 +6,7 @@
 package edu.utez.Dao;
 
 import Utilerias.ConexionMySql;
-import edu.utez.Bean.BeanGrupo;
+import edu.utez.Bean.BeanGrupos;
 import edu.utez.Bean.BeanMateria;
 import edu.utez.Bean.BeanProfesor;
 import java.sql.Connection;
@@ -63,7 +63,7 @@ public class DaoProfesor {
         List listaProf = new ArrayList();
         try {
             Connection con = ConexionMySql.getConnection();
-            PreparedStatement ps = con.prepareStatement(consulta);
+            PreparedStatement ps = con.prepareStatement(sqlConsultaProfesor);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 BeanProfesor bean = new BeanProfesor();
@@ -89,9 +89,9 @@ public class DaoProfesor {
             PreparedStatement ps = con.prepareStatement(consulta);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                BeanGrupo grupo = new BeanGrupo();
+                BeanGrupos grupo = new BeanGrupos();
                 grupo.setIdGrupo(rs.getInt(1));
-                grupo.setCuatrimestre(rs.getInt(2));
+                grupo.setCuatrimestre(rs.getString(2));
                 grupo.setGrupo(rs.getString(3));
                 listaGrados.add(grupo);
             }
@@ -103,7 +103,7 @@ public class DaoProfesor {
         return listaGrados;
     }
       
-      public boolean registroAsesores(BeanProfesor prof,BeanGrupo grup) {
+      public boolean registroAsesores(BeanProfesor prof,BeanGrupos grup) {
         boolean resultado = false;
    
         String registroProveedor = "insert into tutor(idProfesor,grupoID) VALUES(?,?);";

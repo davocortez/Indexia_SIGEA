@@ -7,7 +7,7 @@ package edu.utez.Acciones;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
-import edu.utez.Bean.BeanGrupo;
+import edu.utez.Bean.BeanGrupos;
 import edu.utez.Bean.BeanProfesor;
 import edu.utez.Dao.DaoAsesores;
 import edu.utez.Dao.DaoProfesor;
@@ -52,7 +52,7 @@ public class AccionesProfesor extends ActionSupport {
     public String registroAsesores() {
         DaoProfesor dao = new DaoProfesor();
         BeanProfesor profesor = new BeanProfesor();
-        BeanGrupo grupo = new BeanGrupo();
+        BeanGrupos grupo = new BeanGrupos();
 
         profesor.setIdProfesor(this.getIdProfesor());
         grupo.setIdGrupo(this.getIdGrupo());

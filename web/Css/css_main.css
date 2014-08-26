@@ -283,3 +283,12 @@ legend {
     border-radius: 5px;
 
 }
+
+#tablaNormal{
+    border: #000000;
+}
+
+#alinearSeleccionar{
+    margin-left:-48%;
+    
+}

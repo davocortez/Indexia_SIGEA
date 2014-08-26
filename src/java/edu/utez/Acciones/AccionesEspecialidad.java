@@ -7,6 +7,7 @@ package edu.utez.Acciones;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import edu.utez.Dao.DaoAsesores;
+import edu.utez.Dao.DaoEspecialidad;
 import edu.utez.Dao.DaoProfesor;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,9 +18,28 @@ import java.util.List;
  */
 public class AccionesEspecialidad {
 
+  private String descripcion;
+  private String idProfesor;
     List ListaNombreProfesores = new ArrayList();
     List listaEspecialidad = new ArrayList();
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getIdProfesor() {
+        return idProfesor;
+    }
+
+    public void setIdProfesor(String idProfesor) {
+        this.idProfesor = idProfesor;
+    }
+
+    
     public List getListaEspecialidad() {
         return listaEspecialidad;
     }
@@ -42,8 +62,13 @@ public class AccionesEspecialidad {
         DaoProfesor dao = new DaoProfesor();
         DaoAsesores daoA = new DaoAsesores();
         this.setListaNombreProfesores(dao.consultaProfesoresModuloProf());
-     
         return SUCCESS;
+    }
+    public String insertar(){
+    DaoEspecialidad dao=new DaoEspecialidad();
+    dao.registrarEspecialidad(descripcion, idProfesor);
+            return SUCCESS;
+
     }
 
 }

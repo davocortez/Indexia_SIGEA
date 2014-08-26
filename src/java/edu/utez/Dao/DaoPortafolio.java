@@ -93,7 +93,7 @@ public class DaoPortafolio {
         try {
             Connection con = ConexionMySql.getConnection();
             PreparedStatement ps = con.prepareStatement(consultarPortafolio);
-            ps.setString(1, idProfe);
+                ps.setString(1, idProfe);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -101,6 +101,7 @@ public class DaoPortafolio {
                 bean.setIdReportes(rs.getString(2));
                 bean.setDescripcion(rs.getString(3));
                 bean.setEstado(rs.getString(4));
+                
                 listaPortafolios.add(bean);
             }
             ps.close();

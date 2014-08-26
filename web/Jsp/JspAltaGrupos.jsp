@@ -88,9 +88,9 @@
                                 </thead>
                             <s:iterator value="listaGrupos">
                                 <tr class="span5">
-                                    
+
                                     <td class="span1">
-                                        <s:property value="cuatrimestre"/>
+                                    <s:property value="cuatrimestre"/>
                                     </td>
                                     <td class="span2">
                                         <s:property value="grupo"/>
@@ -98,8 +98,14 @@
                                     <td class="span1">
                                         <s:property value="turno"/>
                                     </td>
-                                    
-                                </tr>
+                                    <td class="span2">
+                                        <s:url id="consultaDetallada" action="consultaDetallada">
+                                            <s:param name="idGrupo" value="idGrupo"/>
+                                        </s:url>
+                                        <s:a href="%{consultaDetallada}" cssClass="boton">Consultar Materias</s:a>
+                                        </td>
+
+                                    </tr>
                             </s:iterator>  
                         </table>
                     </fieldset>

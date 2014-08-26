@@ -12,8 +12,9 @@
 <html>
     <head>
         <title>JspAsignarEspecialidad</title>
-        <meta name="viewport" content="width=device-width intial-scale=1.0 "
-              <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width intial-scale=1.0 "/>
+        <link href="<%=context%>/Css/cssMenu.css" rel="stylesheet" type="text/css" />
+        <link href="<%=context%>/Css/css_main.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <link href="<%=context%>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
         <Link href=" <%=context%>/bootstrap/css/slimmenu.css" rel="stylesheet" type="text/css">
@@ -27,7 +28,6 @@
     </head>
     <body>
         <script src="bootstrap/js/bootstrap.js"></script>
-
         <div class="container">
             <div class="row">
                 <div class="hero-unit">
@@ -38,47 +38,29 @@
                     </div>
                     <div class="alinearnombresistema1">
                         Sistema de Gestion Academica
-                    </div>    </div>
+                    </div>              
+                </div>
             </div>
             <div class="row">
                 <s:include value="/Jsp/Menu.jsp"></s:include>
-                </div> 
-
-
-                <div class="row">
-                    <div class="span121 ">
-                        <legend>Asignar Especialidad</legend>
-                        <fieldset id="especialidad">
-                            <table id="especialidadProfe">
-                                <tr>
-                                    <td>Profesor</td><td><input type="text" id="buscarProfesor"></td><td><button>Buscar</button></td>
-                                </tr>
-                            </table>
-                        </fieldset>   
-                        <table id="tablaEspecialidad">
-                            <tr>
-                                <td><input type="hidden" placeholder="id Profesor"/></td>
-                            </tr>
-                            <tr>
+                </div>
+                <div class="row">   
+                    <div class="span12">
+                        <form action="registrarEspecialidad">
+                            <fieldset  class="span10">
+                                <legend >Asignar Especialidad</legend>
+                                <p>Nombre Profesor</p>
                             <s:select list="ListaNombreProfesores" name="idProfesor" listKey="idProfesor" listValue="nombreProfesor" 
-                                      headerKey="0" headerValue="Seleccione un profesor:">
-
-                            </s:select> 
-                        </tr>
-                        <tr>
-                            <td>Especialidad</td><td><select><option value="html"></option></select></td>
-                        </tr>
-                        <tr>
-                            <td></td><td><button>Agregar</button></td>
-                        </tr>
-                    </table>
-                    <table id="especialidadTabla">
-
-                        <td id="profeNombre">Nombre Profesor:<input type="hidden"></td>
-                        <tr>   
-                            <td id="datosEspecialidad"></td>
-                        </tr>
-                    </table>
+                                      headerKey="0" headerValue="Seleccione un profesor:" >
+                            </s:select>
+                            <p>Especialidad</p>
+                            <select  name="descripcion">
+                                <option>Programacion 1</option>
+                                <option>Programacion 2</option>
+                            </select>
+                            <button class="btn btn-primary">Registrar</button>
+                        </fieldset>
+                    </form>
                 </div>
             </div>
             <div class="row">

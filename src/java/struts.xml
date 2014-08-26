@@ -48,7 +48,13 @@
         <action name="consultaEspecialidad" class="edu.utez.Acciones.AccionesEspecialidad" method="consultarProfesores">
             <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
         </action>
+        <action name="registrarEspecialidad" class="edu.utez.Acciones.AccionesEspecialidad" method="insertar">
+            <result name="success">/Jsp/JspAsignarEspecialidad.jsp</result>
+        </action>
+        
         <!-- Registro de Especialidad en profesores -->
+        
+        
         <!-- Registro de Grupos -->
         <action name="RegistrarGrupos" class="edu.utez.Acciones.AccionesGrupos" method="insertarGrupo">
             <result name="success">/Jsp/JspAltaGrupos.jsp</result>
@@ -57,7 +63,13 @@
             <result name="success">/Jsp/JspAltaGrupos.jsp</result>
         </action>
         
+        <action name="consultaDetallada" class="edu.utez.Acciones.AccionesMaterias" method="consultaMaterias">
+            <result name="success">/Jsp/JspAsignarGrupo.jsp</result>
+        </action>
+        
         <!-- Registro de Grupos -->
+        
+        
 
 
     </package>  

@@ -7,7 +7,7 @@
 package edu.utez.Dao;
 
 import Utilerias.ConexionMySql;
-import edu.utez.Bean.BeanGrupo;
+
 import edu.utez.Bean.BeanProfesor;
 import edu.utez.Bean.BeanTutor;
 import java.sql.Connection;

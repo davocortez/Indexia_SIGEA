@@ -57,12 +57,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="span121">
-                        <legend >Entrega de Portafolios</legend>
-
-                        <table  class="table table-striped">
+                    <div class="span12">
+                        <legend  >Entrega de Portafolios</legend>
+                        <table  class="table-hover">
                             <thead>
-                                <tr>
+                                <tr class="span10">
                                     <th name="nombre">
                                         Nombre Profesor:
                                     </th>
@@ -73,7 +72,7 @@
                             <tbody>
                             <s:iterator var="listaPortafolios" value="listaProfesores">
                             
-                                <tr>
+                                <tr class="span10">
                                     <td id="datos" > 
                                         <input value="<s:property value="idProfesor"/>" type="hidden" name="idProfesor">
                                         <s:property value="nombreProfesor"/>
